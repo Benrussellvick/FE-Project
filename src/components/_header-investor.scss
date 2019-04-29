@@ -1,0 +1,160 @@
+//
+// Header contacts
+// --------------------------------------------------
+
+.c-header-investor {
+  padding: 0;
+
+  &__row {
+    @media only screen and ($bp-lg-min) {
+      display: flex;
+      align-items: stretch;
+      min-width: 100%;
+    }
+  }
+
+  &__wrap {
+    padding: 25px 15px 20px;
+
+    @media only screen and ($bp-md-min) {
+      padding: 30px;
+
+      &:first-child {
+        padding: 30px;
+      }
+
+      &-intro {
+        padding-right: 30px;
+
+        + div {
+          padding-left: 30px;
+        }
+      }
+    }
+
+    @media only screen and ($bp-lg-min) {
+      padding: 60px;
+
+      &:first-child {
+        padding: 60px;
+      }
+
+      &-intro {
+
+        + div {
+          padding-left: 0;
+        }
+      }
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      padding: 90px;
+
+      &:first-child {
+        padding: 90px;
+      }
+    }
+
+    h1, h4, h5, li, p {
+      color: $white;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 48px;
+      margin-top: 0;
+      max-width: 400px;
+
+      @media only screen and ($bp-md-min) {
+        max-width: none;
+        font-size: 50px;
+        line-height: 60px;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        font-size: 65px;
+        line-height: 78px;
+      }
+
+      @media only screen and ($bp-xxl-min) {
+        font-size: 70px;
+        line-height: 84px;
+      }
+    }
+
+    h4 {
+      max-width: 400px;
+      @media only screen and ($bp-md-min) {
+        margin-top: 5px;
+        max-width: none;
+      }
+    }
+
+    p.links {
+      margin: 10px 0;
+      a {
+        margin-bottom: 5px;
+        @media only screen and ($bp-xxl-min) {
+          font-size: 16px;
+        }
+      }
+
+      @media only screen and ($bp-md-min) {
+        margin-top: 0;
+        line-height: normal;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        margin-top: 10px;
+      }
+    }
+
+    p.tag {
+      margin-bottom: 10px;
+
+      @media only screen and ($bp-md-min) {
+        margin-bottom: 15px;
+      }
+      @media only screen and ($bp-xl-min) {
+        font-size: 16px;
+      }
+    }
+
+    &-sidebar {
+      padding: 0 0 20px 0;
+
+      &:last-child {
+        padding: 0;
+
+        // @media only screen and ($bp-md-min) {
+        //   padding-left: 30px;
+        // }
+        @media only screen and ($bp-lg-min) {
+          padding-left: 0;
+          padding-top: 30px;
+        }
+      }
+
+      h4 {
+        margin-top: 15px;
+        margin-bottom: 25px;
+
+        @media only screen and ($bp-lg-min) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.safari {
+  .c-header-investor {
+    padding: 0;
+  
+    &__row {
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+//
+// Side navigation
+// --------------------------------------------------
+
+.c-side-nav {
+  max-width: 175px;
+  padding-right: 15px;
+  width: 100%;
+  font-family: $base-font-light;
+  position: fixed;
+  z-index: 2;
+  display: none;
+  @media only screen and ($bp-lg-min) {
+    display: block;
+  }
+
+    &-nested {
+      margin: 0 0 0 30px;
+      padding-top: 0;
+    }
+  li {
+    width: 100%;
+    margin-bottom: 0;
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 16px;
+      color: $text-grey;
+      width: 100%;
+      display: block;
+      padding: 10px 0;
+      position: relative;
+      @include transition(transition, all .25s);
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        height: 1px;
+        background-color: transparent;
+        @include transition(transition, all .25s);
+      }
+      &:link, 
+      &:visited {
+        text-decoration: none;
+      }
+      &.section-title {
+        font-family: $base-font-bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: $black;
+      }
+      &.active {
+        color: $black;
+        font-family: $base-font-bold;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $black;
+        }
+      }
+      &:hover, &:focus {
+        color: $black;
+        position: relative;
+        text-decoration: none;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $black;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+//
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+  counter-reset:li;
+  list-style-type:none;
+  padding:0;
+  margin: 0 0 30px 0;
+  li {
+    margin-bottom: 10px;
+    margin-left: 30px;
+    position:relative;
+
+    &:before{
+      color: $text-color;
+      counter-increment:li; 
+      display: inline-block;
+      height: 100%;
+      left: -30px;
+      position:absolute; 
+    }
+  }
+
+  ul, ol { 
+    padding-top: 10px;
+  }
+}
+
+ul li:before {
+  content:"\2014";
+  top:-1px;
+}
+
+ol {
+  li:before{ 
+    content:counter(li) '.';
+    font-family: $body-font-semibold;
+    top:0; 
+  }
+  ul li:before{
+    content:"\25CF"!important;
+    top:-1px; 
+  }
+}
+
+
+// Unstlyed list
+ul, ol {
+  &.list-unstyled {
+    margin-left: 0;
+    list-style: none;
+    li {
+      margin-left: 0;
+      &:before {
+        content: '';
+      }
+    }
+  }
+}
+
+
+// Description Lists
+dl {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+dt {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+dd {
+  margin-left: 0; 
+  margin-bottom: 10px;
+}
+
+.footnotes-list {
+  
+  @media only screen and ($bp-md-min) {
+    font-size: 18px;
+  }
+
+  li {
+    margin-left: 12px;
+
+    &:before {
+      content: "*";
+      left: -12px;
+      top: 2px;
+
+      @media only screen and ($bp-md-min) {
+        font-size: 22px;
+
+      }
+    }
+  }
+}

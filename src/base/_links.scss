@@ -1,0 +1,424 @@
+//
+// Links
+// --------------------------------------------------
+a {
+	&:link,
+	&:visited {
+		// background-color: inherit;
+		color: $text-color;
+		// text-decoration: underline;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+  }
+  
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Button style links
+// -------------------------
+
+.button {
+	display: inline-block;
+	font-family: $base-font-bold;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 13px;
+	color: $white;
+	border: 1px solid $black;
+	background-color: $black;
+	margin: 0;
+	padding: 6px 20px;
+	// transition: background-color .25s linear;
+	@include transition(transition, background-color .25s linear);
+	text-align: center;
+	cursor: pointer;
+	@media only screen and ($bp-md-min) {
+		font-size: 14px;
+		line-height: 18px;
+	}
+	&:link,
+	&:visited {
+		text-decoration: none;
+		color: $white;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: underline;
+		background-color: $dark-grey;
+	}
+	
+	&.white {
+		background: $white;
+		color: $black;
+		&:link,
+		&:visited {
+			color: $text-color;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: none;
+		}
+	}
+  
+  &--expand {
+    position: relative;
+    background-color: transparent;
+    padding: 7px 30px;
+  
+    &:after {
+      @include sprite(plus-black);
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 8px;
+		}
+		
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: transparent;
+		}
+	}
+
+	&--chevron {
+    position: relative;
+    background-color: transparent;
+    padding: 7px 30px;
+  
+    &:after {
+      @include sprite(chevron-black);
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 8px;
+		}
+		
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: transparent;
+		}
+	}
+
+	&--download {
+		display: block;
+		font-family: $base-font-bold;
+		font-size: 14px;
+		line-height: 18px;
+    	position: relative;
+    	background-color: transparent;
+		padding: 4px 0 4px 40px;
+		text-decoration: none;
+
+		// @keyframes link-hover {
+		// 	0%   { top: -3px; }
+		// 	25%   { top: 0; }
+		// 	50%   { top: -3px; }
+		// 	75%   { top: 0; }
+		// 	100% { top: -3px; }
+		// }
+
+		em {
+			font-family: $base-font-light;
+			color: $text-grey;
+			font-style: normal;
+			display: block;
+			text-transform: uppercase;
+		}
+		span {
+			@include transition(transition, all .25s linear);
+			background-color: $black;
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+			position: absolute;
+			left: 0;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0px;
+				@include sprite(arrow-download-white);
+				right: 0;
+				margin: auto;
+				display: block;
+				bottom: 0;
+			}
+		}
+		&:link,
+		&:visited {
+			text-decoration: none;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: underline;
+			span {
+				background-color: $dark-grey;
+				// needs to be highlight of theme //
+				box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.4);
+			}
+		}
+	}
+}
+
+// Link with icon
+// -------------------------
+[class^=link-] {
+	font-size: 14px;
+	line-height: 18px;
+	font-family: $base-font-light;
+	text-decoration: none;
+	padding-left: 17px;
+	position: relative;
+	outline: none;
+	background: none;
+	border: none;
+	strong {
+		font-family: $base-font-bold;
+		font-weight: normal;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 3px;
+		left: 0;
+		@include sprite(plus-black);
+	}
+	// &:link,
+	// &:visited {
+	// 	text-decoration: none;
+	// }
+
+	@media screen and ($bp-xxl-min) {
+		font-size: 16px;
+	}
+	& + [class^=link-] {
+		width: 100%;
+		margin-top: 15px;
+	}
+}
+[class^=link-] {
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+.link {
+	position: relative;
+	display: inline-block;
+	padding-left: 17px;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 4px;
+		left: 0;
+		@include sprite(arrow-external-black);
+	}
+	&:link,
+	&:visited {}
+	&:hover,
+	&:active,
+	&:focus {
+		// text-decoration: underline;
+	}
+}
+
+// Internal link 
+// -------------------------
+.link-internal {
+	position: relative;
+	display: inline-block;
+  	padding-left: 17px;
+  
+	&:before {
+		@include sprite(arrow-internal-black);
+		top:5px;
+	  }
+	  
+	  &.white {
+		&:before {
+			content: "";
+			@include sprite(arrow-internal-white);
+		  }
+	}
+  
+	&:link,
+  &:visited {}
+  
+	&:hover,
+	&:active,
+	&:focus {}
+}
+
+// Email link 
+// -------------------------
+.link-email {
+	position: relative;
+	display: inline-block;
+  	padding-left: 17px;
+  
+	&:before {
+		@include sprite(arrow-internal-black);
+		top:5px;
+	  }
+	  
+	  &.white {
+		&:before {
+			content: "";
+			@include sprite(arrow-internal-white);
+		  }
+	}
+	&:link,
+	&:visited {}
+  
+	&:hover,
+	&:active,
+	&:focus {}
+
+	//link-email class sometimes used on p/li tags
+	a {
+		&:link,
+		&:visited {
+			text-decoration: none;
+		}
+	
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+//link-email class sometimes used on p/li tags
+li, p {
+	&.link-email {
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+}
+
+// Back link 
+// -------------------------
+.link-back {
+	position: relative;
+	display: inline-block;
+  	padding-left: 17px !important;
+  
+	&:before {
+		@include sprite(arrow-internal-black);
+		transform:rotate(180deg);
+		top:12px;
+	  }
+	  
+	  &.white {
+		&:before {
+			content: "";
+			@include sprite(arrow-internal-white);
+		  }
+	}
+  
+	&:link,
+  &:visited {}
+  
+	&:hover,
+	&:active,
+	&:focus {}
+}
+
+// External link 
+// -------------------------
+.link-external {
+	position: relative;
+	display: inline-block;
+  padding-left: 17px;
+  
+	&:before {
+		content: "";
+		@include sprite(arrow-external-black);
+  	}
+
+	&.white {
+		color: $white;
+		&:before {
+			content: "";
+			@include sprite(arrow-external-white);
+		  }
+	}
+  
+	&:link,
+  &:visited {}
+  
+	&:hover,
+	&:active,
+	&:focus {}
+}
+
+
+// Download link 
+// -------------------------
+.link-download {
+	position: relative;
+	display: inline-block;
+	padding-left: 17px;
+
+	em {
+		color: $text-grey;
+		font-style: normal;
+		text-transform: uppercase;
+	}
+
+	&:before {
+		@include sprite(arrow-download-black);
+	}
+
+	&.white {
+		&:before {
+			content: "";
+			@include sprite(arrow-download-white);
+		  }
+	}	
+}
+.link-download.media-viewer-download
+{
+	margin: 15px 0;
+}
+
+// Calendar link 
+// -------------------------
+.link-calendar {
+	position: relative;
+	display: inline-block;
+	padding-left: 17px;
+	em {
+		color: $text-grey;
+		font-style: normal;
+	}
+	&:before {
+		@include sprite(plus-black);
+	  }
+	  
+	  &.white {
+		&:before {
+			@include sprite(plus-white);
+	
+		  }
+	}
+	&:link,
+	&:visited {}
+	&:hover,
+	&:active,
+	&:focus {}
+}

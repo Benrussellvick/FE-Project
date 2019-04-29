@@ -1,0 +1,206 @@
+// Theming
+// --------------------------------------------------
+
+.c-header-contacts {
+
+    &__wrap {
+        background-color: $default-grey;
+       
+        &:first-child {
+            background-color: $black;
+        }
+
+        h1, li, p {
+            color: $white;
+        }
+
+        a {
+            color: $white;
+      
+            &:hover,
+            &:focus,
+            &:active {
+              color: $white;
+            }
+        }    
+    } // end theme
+
+    //theme A - strong green sand
+    &.theme-a {
+        .c-header-contacts__wrap {
+            background-color: $green-kaitoke;
+       
+            &:first-child {
+                background-color: $green-zuccini;
+            }
+
+            h1, li, p {
+                color: $white;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme B - blue green lemon
+    &.theme-b {
+        .c-header-contacts__wrap {
+            background-color: $green-mosque;
+       
+            &:first-child {
+                background-color: $green-deep-teal;
+            }
+
+            h1, li, p {
+                color: $white;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme C - dark blue sand
+    &.theme-c {
+        .c-header-contacts__wrap {
+            background-color: $blue-sapphire;
+       
+            &:first-child {
+                background-color: $green-dark;
+            }
+
+            h1, li, p {
+                color: $white;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme D - blue orange
+    &.theme-d {
+        .c-header-contacts__wrap {
+            background-color: $blue-tarawera;
+       
+            &:first-child {
+                background-color: $blue-gem;
+            }
+
+            h1, li, p {
+                color: $white;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme E - navy orange
+    &.theme-e {
+        .c-header-contacts__wrap {
+            background-color: $blue-midnight;
+       
+            &:first-child {
+                background-color: $blue-navy;
+            }
+
+            h1, li, p {
+                color: $white;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme F - red violet light orange
+    &.theme-f {
+        .c-header-contacts__wrap {
+            background-color: $purple-palatinate;
+       
+            &:first-child {
+                background-color: $purple-blackberry;
+            }
+
+            h1 {
+                color: $yellow-selective;
+            }
+
+            li, p {
+                color: $white;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme G - dark red light orange
+    &.theme-g {
+        .c-header-contacts__wrap {
+            background-color: $purple-red;
+       
+            &:first-child {
+                background-color: $purple-tyrian;
+            }
+
+            h1, li, p {
+                color: $white;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                color: $white;
+                }
+            }
+        }
+    } // end theme
+}

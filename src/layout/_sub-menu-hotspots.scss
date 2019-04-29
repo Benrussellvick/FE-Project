@@ -1,0 +1,145 @@
+//
+// Sub menu hotspots
+// --------------------------------------------------
+
+.sub-menu-hotspots {
+  display: none;
+  padding-top: 10px;
+
+  @media only screen and ($bp-lg-min) {
+    display: block;
+    opacity: 1;
+  }
+
+  &__col {
+    width: 33.71%;
+    max-width: 252px;
+    float: left;
+    
+    @media only screen and ($bp-xl-min) {
+      max-width: 300px;
+    }
+
+    &:first-of-type {
+      margin-right: 30px;
+
+      @media only screen and ($bp-xxl-min) {
+        margin-right: 60px;
+      }
+    }
+
+    &--top {
+      margin-top: -34px;
+    }
+  }
+
+  &__article-heading {
+    font-size: 20px;
+    line-height: 26px;
+    font-family: $body-font-semibold;
+
+    @media only screen and ($bp-xxl-min) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__hotspot-img {
+    margin-bottom: 12px;
+  }
+
+  &__link {
+    text-decoration: none;
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //   text-decoration: underline;
+
+    //    + .sub-menu-hotspots__link-download {
+    //     text-decoration: underline;
+    //   }
+    // }
+
+    h2 {
+      display: inline;
+      transition: all 0.3s;
+      border-bottom: 1px solid transparent;
+      // padding-bottom: 3px;
+    }
+    &:hover, &:focus {
+      h2 {
+        text-decoration: none;
+        border-bottom-color: $black;
+        border-bottom-color: inherit;
+      }
+    }
+  }
+
+  &__link-download {
+    font-family: $base-font-bold;
+
+    @media only screen and ($bp-xxl-min) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__download-size {
+    font-family: $base-font-light;
+    display: block;
+  }
+
+  &__share-price {
+    font-family: $base-font-light;
+    margin-bottom: 30px;
+  }
+
+  &__stock-exchange {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1;
+    font-family: $base-font-bold;
+    margin-bottom: 9px;
+
+    @media only screen and ($bp-xxl-min) {
+      font-size: 14px;
+    }
+  }
+
+  &__share-value {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 8px;
+
+    @media only screen and ($bp-xxl-min) {
+      font-size: 36px;
+    }
+  }
+
+  &__share-change {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  &__share-delay {
+    color: $text-grey;
+    margin-bottom: 0;
+    font-size: 10px;
+    line-height: 1;
+  }
+
+  &__address {
+    line-height: 18px;
+  }
+
+  &__contact {
+    line-height: 22px;
+  }
+  
+}

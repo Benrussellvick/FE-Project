@@ -1,0 +1,90 @@
+// ==============================================
+// Hotpots
+// ==============================================
+
+.hotspot-element {
+	a {
+		&:link,
+		&:visited {
+			text-decoration: none;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+			h2 {
+				text-decoration: underline;
+			}
+			h3 {
+				text-decoration: underline;
+			}
+			h4 {
+				// text-decoration: underline;
+			}
+			p {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+[class^=c-story-panel-] {
+	&.hotspot-element {
+		a {
+			&:link,
+			&:visited {
+				text-decoration: none;
+			}
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: none;
+				h2 {
+					text-decoration: none;
+				}
+				h3 {
+					text-decoration: none;
+				}
+				h4 {
+					text-decoration: none;
+				}
+				p {
+					text-decoration: none;
+				}
+			}
+
+			h2 {
+				display: inline;
+				transition: all 0.3s;
+				border-bottom: 1px solid transparent;
+				padding-bottom: 3px;
+			}
+			h2 + p {
+				margin-top: 10px;
+				@media only screen and ($bp-md-min) {
+					margin-top: 15px;
+				}
+				@media only screen and ($bp-xxl-min) {
+					margin-top: 20px;
+				}
+			}
+			&:hover, &:focus {
+				h2 {
+					text-decoration: none;
+					border-bottom-color: $white;
+					border-bottom-color: inherit;
+				}
+			}
+
+			&[class*=link--negative] {
+				&:hover, &:focus {
+					h2 {
+						text-decoration: none;
+						border-bottom-color: $black;
+						border-bottom-color: inherit;
+					}
+				}
+			}
+		}
+	}
+}

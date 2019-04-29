@@ -1,0 +1,226 @@
+// Tabs
+// --------------------------------------------------
+
+.tabs-container {
+	// box-shadow: $dropdown-box-shadow;
+	// border-radius: 3px;
+	font-family: $base-font-light;
+	position: relative;
+	ul.js-tablist {
+		overflow: hidden;
+		height: 0;
+		opacity: 0;
+		background: $white;
+		width: 100%;
+		top: 42px;
+		@media only screen and ($bp-lg-min) {
+			top: 0;
+		}
+		@include transition(transition, all .25s ease-in-out);
+		&.js-active {
+			@include transition(transition, all .25s ease-in-out);
+			height: auto;
+			position: absolute;
+			width: 100%;
+			display: block;
+			opacity: 1;
+			z-index: 15;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 
+			0 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 0 0 3px 3px;
+		}
+		
+	}
+	// &.active ul {
+	// 	display: block;
+	// 	max-height: auto;
+	// }
+	.tabs-trigger {
+		&.js-active p {
+			// border-radius: 3px 3px 0 0;
+			&:after {
+				transform: rotate(-90deg);
+			}
+			&:before {
+				content: '';
+				display: block;
+				height: 0;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				border-radius: 3px 3px 0 0;
+				@include transition(transition, all .25s ease-in-out);
+			}
+		}
+		p {
+			overflow: hidden;
+			cursor: pointer;
+			margin: 0;
+
+			padding: 15px 20px;
+			display: block;
+			width: 100%;
+			position: relative;
+			font-family: $base-font-bold;
+			font-size: 14px;
+			line-height: 16px;
+			text-decoration: none;
+			box-shadow: $dropdown-box-shadow;
+			border-radius: 3px;
+			@include transition(transition, all .25s ease-in-out);
+			&:after {
+				@include transition(transition, all .25s ease-in-out);
+				transform: rotate(90deg);
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				right: 22px;
+			}
+			
+			&:hover,
+			&:active,
+			&:focus { 
+				outline: none;
+				&:before {
+					content: '';
+					display: block;
+					height: 2px;
+					background: $black;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					@include transition(transition, all .25s ease-in-out);
+				}
+			}
+		}
+	}
+	@media only screen and ($bp-lg-min) {
+		box-shadow: none;
+		border-radius: none;
+		.tabs-trigger {
+			display: none;
+		}
+		ul.js-tablist {
+			//display: inline-block;
+			height:auto;
+			opacity: 1;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+.js-tablist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	@media only screen and ($bp-lg-min) {
+		&:before {
+			content: '';
+			display: block;
+			height: 1px;
+			background: $keyline;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			@include transition(transition, all .25s ease-in-out);
+		}
+	}
+}
+.js-tablist__item {
+	display: inline-block;
+	margin: 0;
+	float: left;
+	width: 100%;
+	a {
+		width: 100%;
+		padding: 15px 20px;
+		text-transform: none;
+	}
+	&:before {
+		display: none;
+	}
+	&:last-of-type {
+		margin-right: 0;
+	}
+	@media only screen and ($bp-lg-min) {
+		margin-right: 30px;
+		a {
+			padding: 15px 0;
+			text-transform: uppercase;
+		}
+	}
+}
+  
+.js-tablist__link {
+	display: inline-block;
+	cursor: pointer;
+	font-family: $base-font-light;
+	position: relative;
+	text-align: left;
+	min-width: 100px;
+	font-size: 14px;
+	line-height: 17px;
+	@include transition(transition, all .25s ease-in-out);
+	@media only screen and ($bp-lg-min) {
+		&:before {
+			content: '';
+			display: block;
+			height: 0;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			border-radius: 3px 3px 0 0;
+			@include transition(transition, all .25s ease-in-out);
+		}
+	}
+	&[aria-selected="true"] {
+		font-family: $base-font-bold;
+		background: $black;
+		color: $white;
+		@media only screen and ($bp-lg-min) {
+			background: none;
+			color: $black;
+		}
+		&:before {
+			background: $black;
+			height: 2px;
+		}
+	}
+	&:hover, &:focus {
+		background: $black;
+		color: $white;
+		@media only screen and ($bp-lg-min) {
+			background: none;
+			color: $black;
+		}
+		&:before {
+			background: $black;
+			height: 2px;
+		}
+	}
+	@media only screen and ($bp-lg-min) {
+		&:before {
+			width: 100%;
+		}
+	}
+}
+  
+.js-tabcontent {
+	padding: 30px 0;
+	display: inline-block;
+	&[aria-hidden="true"] {
+		display: none;
+	}
+}
+
+p + .js-tabs {
+	padding-top: 15px;
+	@media only screen and ($bp-lg-min) {
+		padding-top: 30px;
+	}
+}

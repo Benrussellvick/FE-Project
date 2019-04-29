@@ -1,0 +1,215 @@
+//
+// Share
+// --------------------------------------------------
+
+
+.c-share {
+
+	@media only screen and ($bp-lg-min) {
+		width: 35px;
+		position: absolute;
+		top: 13px;
+		left: 60px;
+	}
+
+	@media only screen and ($bp-xxl-min) {
+		left: 90px;
+	}
+
+	&__ui {
+		margin: 0 0 15px 0;
+
+		li {
+			margin: 0;
+			margin-right: 5px;
+			opacity: 0;
+			visibility: hidden;
+
+			&:before {
+				display: none;
+			}
+
+			display: inline;
+
+			@media only screen and ($bp-lg-min) {
+				display: block;
+			}
+
+			a {
+				border: 1px solid $black;
+				border-radius: 30px;
+				height: 30px; 
+				width: 30px;
+				display: inline-block;
+				text-indent: -9999px;
+				position: relative;
+
+				&:before {
+					position: absolute;
+					content: "";
+				} 
+
+				&:hover {
+					background-color: $black;
+				}
+			}
+
+			&.share {
+				a {
+					&:before {
+						@include sprite(Share);
+						top: 7px;
+						left: 6px;
+					}
+
+					&:hover {
+						&:before {
+							@include sprite(Share-white);
+						}
+					}
+				}
+			}
+
+			&.copy {
+				&.close {
+					animation: FadeIn 1s both normal;
+					animation-delay: .1s;
+				}
+
+				&.fadeOut {
+					animation: FadeOut 1s both normal;
+					animation-delay: .3s;
+				}
+
+				a {
+					&:before {
+						@include sprite(Link);
+						top: 7px;
+						left: 7px;
+					}
+
+					&:hover {
+						&:before {
+							@include sprite(link-white);
+						}
+					}
+
+					&:active,
+					&.active {
+						background-color: #7ED321;
+						border: 1px solid #7ED321;
+
+						&:before {
+							@include sprite(Tick-white);
+							top: 10px;
+						}
+					}
+				}
+			}
+
+			&.facebook {
+				&.close {
+					animation: FadeIn 1s both normal;
+					animation-delay: .2s;
+				}
+				&.fadeOut {
+					animation: FadeOut 1s both normal;
+					animation-delay: .2s;
+				}
+
+				a {
+					&:before {
+						@include sprite(facebook-black);
+						top: 7px;
+						left: 10px;
+					}
+
+					&:hover {
+						&:before {
+							@include sprite(facebook-white);
+						}
+					}
+				}
+			}
+
+			&.twitter {
+				&.close {
+					animation: FadeIn 1s both normal;
+					animation-delay: .3s;
+				}
+				&.fadeOut {
+					animation: FadeOut 1s both normal;
+					animation-delay: .1s;
+				}
+
+				a {
+					&:before {
+						@include sprite(twitter-black);
+						top: 9px;
+						left: 7px;
+					}
+
+					&:hover {
+						&:before {
+							@include sprite(twitter-white);
+						}
+					}
+				}
+			}
+
+			&.linkedin {
+				&.close {
+					animation: FadeIn 1s both normal;
+					animation-delay: .4s;
+				}
+				&.fadeOut {
+					animation: FadeOut 1s both normal;
+					animation-delay: 0s;
+				}
+
+				a {
+					&:before {
+						@include sprite(linkedin-black);
+						top: 8px;
+						left: 8px;
+					}
+
+					&:hover {
+						&:before {
+							@include sprite(linkedin-white);
+						}
+					}
+				}
+			}
+
+			&:first-child {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+@keyframes FadeIn { 
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes FadeOut { 
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}

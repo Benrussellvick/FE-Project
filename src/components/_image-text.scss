@@ -1,0 +1,187 @@
+//
+// Image text panel 1
+// --------------------------------------------------
+
+.c-image-text {
+  position: relative;
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+
+      @media only screen and (min-height: 550px) {
+        color: $black;
+      }
+
+      @media only screen and ($bp-md-min) {
+        color: $black;
+      }
+    }
+
+    &--negative {
+      .c-image-text__heading,
+      .c-image-text__intro {
+        @media only screen and ($bp-md-min) {
+          color: $black;
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $black;
+      }
+    }
+  }
+  
+  &__text-wrapper {
+    
+    max-width: 500px;
+    width: 100%;
+    padding: 15px;
+
+    @media only screen and (max-width: 550px) {
+      position: relative;
+      .c-image-text__heading,
+      .c-image-text__intro {
+        color: $black;
+      }
+    }
+
+    @media only screen and ($bp-md-min) {
+      max-width: 700px;
+      padding: 30px;
+    }
+
+    @media only screen and ($bp-lg-min) {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%;
+    }
+
+    @media only screen and ($bp-xl-min) {
+      width: 40%;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      max-width: 700px;
+      top: 10%;
+      transform: translateY(-10%);
+      left: 90px;
+    }
+  }
+  
+  &__heading {
+    font-size: 28px;
+    line-height: 34px;
+    
+    @media only screen and ($bp-md-min) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @media only screen and ($bp-xl-min) {
+      font-size: 45px;
+      line-height: 50px;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      font-size: 60px;
+      line-height: 72px;
+    }
+  }
+  
+  &__intro {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 26px;
+
+    @media only screen and (min-height: 550px) {
+      color: $black;
+    }
+    
+    @media only screen and ($bp-md-min) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @media only screen and ($bp-xl-min) {
+    
+    }
+  }
+
+  &__horizontal-gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+    height: 30%;
+
+    @media only screen and ($bp-md-min) {
+      height: 50%;
+    }
+
+    @media only screen and ($bp-xl-min) {
+      height: 400px;
+    }
+
+    &--25 {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 100%);
+    }
+
+    &--50 {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.50) 100%);
+    }
+  }
+
+  &__vertical-gradient {
+    background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 50%;
+
+    @media only screen and ($bp-md-min) {
+      width: 50%;
+    }
+
+    &--25 {
+      background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 100%);
+    }
+
+    &--50 {
+      background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.50) 100%);
+    }
+  }
+
+  &__media-wrapper {
+    position: relative;
+    background-color: $offwhite;
+
+    @media only screen and ($bp-md-min) {
+      min-height: 410px;
+    }
+
+    @media only screen and ($bp-lg-min) {
+      min-height: 560px;
+    }
+
+    @media only screen and ($bp-xl-min) {
+      min-height: 790px;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      min-height: 1065px;
+    }
+  } 
+}
+

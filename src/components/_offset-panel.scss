@@ -1,0 +1,105 @@
+//
+// Offset feature panel
+// --------------------------------------------------
+
+.c-offset-panel {
+  margin: 30px 0;
+  @media only screen and ($bp-md-min) {
+    display: flex;
+    margin: 60px 0;
+  }
+
+  .row {
+    min-width: 100%;
+  }
+
+  &__img {
+    img {
+      min-width: 100%;
+    }
+  }
+  
+  &__text {
+    padding-top: 15px;
+
+    p {
+      margin-bottom: 15px;
+    }
+    .link-internal {
+      @media only screen and ($bp-xxl-min) {
+        margin-top: 10px;
+      }
+    }
+    @media only screen and ($bp-md-min) {
+      small {
+        font-size: 20px;
+      }
+
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      align-self: center;
+      justify-content: center;
+    }
+  }
+  @media only screen and ($bp-lg-min) {
+    small {
+      font-size: 22px;
+    }
+    .c-pullquote blockquote {
+      margin-left: 6px;
+    }
+
+    p, h5 {
+      max-width: 750px;
+    }
+  }
+}
+
+.c-offset-panel__img + .c-offset-panel__text {
+  @media only screen and ($bp-md-min) {
+    padding: 0 0 0 30px;
+  }
+  @media only screen and ($bp-lg-min) {
+    padding: 0 60px 0 60px;
+  }
+  @media only screen and ($bp-xxl-min) {
+    padding: 0 90px 0 90px;
+  }
+
+  &[class*=pull-] {
+    @media only screen and ($bp-md-min) {
+      padding: 0 30px 0 0;
+    }
+    @media only screen and ($bp-lg-min) {
+      padding: 0 60px 0 0;
+    }
+    @media only screen and ($bp-xxl-min) {
+      padding: 0 90px 0 0;
+    }
+  }
+}
+
+.c-boilerplate {
+  padding: 30px 0;
+  @media only screen and ($bp-lg-min) {
+    padding: 60px 0;
+  }
+  h6 {
+    margin: 0;
+  }
+  ul {
+    li {
+      margin-bottom: 0;
+
+      @media only screen and ($bp-md-min) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+      @media only screen and ($bp-md-min) {
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+  }
+}

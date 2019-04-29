@@ -1,0 +1,66 @@
+//
+// Figure 1
+// --------------------------------------------------
+
+.c-figure-1 { 
+
+  // &.u-text-wrapper{
+  //   max-width:513px;
+  // }
+
+  &.full-width{
+    padding:0;
+    figure, img{
+      width:100%;
+    }
+    figcaption{
+      @media only screen and ($bp-lg-min) {
+       padding-left:15px;
+      }
+    }
+  }
+
+  &.padding{
+
+    figcaption{
+      padding-left:0;
+      padding-right:0;
+    }
+      
+    @media only screen and ($bp-md-min) {
+      padding: 0;
+    }
+    
+    @media only screen and ($bp-lg-min) {
+      padding: 0 60px;
+    }
+    
+    @media only screen and ($bp-xxl-min) {
+      padding: 0 90px;
+    }
+  }
+
+  &__figure {
+    margin-bottom: 10px;
+
+    @media only screen and ($bp-md-min) { 
+      width: 100%;
+    }
+  }
+
+  &__figcaption {
+    font-family: $base-font-light;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px 0;
+
+    @media only screen and ($bp-md-min) {
+      padding: 15px 0;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      padding: 20px 0;
+      font-size: 16px;
+    }
+  }
+}

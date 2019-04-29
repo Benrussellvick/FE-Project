@@ -1,0 +1,188 @@
+//
+// Header careers
+// --------------------------------------------------
+
+.c-header-careers {
+  padding: 0;
+
+  &__row {
+    @media only screen and ($bp-lg-min) {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  &__wrap {
+    padding: 25px 15px 20px;
+
+    .c-pullquote {
+      blockquote {
+        font-family: $body-font-light;
+        font-size: 22px;
+        margin: 0;
+        padding-top: 20px;
+        max-width: 400px;
+
+        @media only screen and ($bp-md-min) {
+          line-height: 32px;
+          max-width: 550px;
+        }
+
+        @media only screen and ($bp-lg-min) {
+          margin: 0 0 0 20px;
+          padding-top: 0;
+        }
+
+        @media only screen and ($bp-xl-min) {
+          margin: 0 0 0 30px;
+          font-size: 26px;
+          line-height: 34px;
+        }
+
+        @media only screen and ($bp-xxl-min) {
+          font-size: 35px;
+          line-height: 42px;
+        }
+
+        span.open-quote {
+          &:before {
+            left: -17px;
+            top: -20px;
+
+            @media only screen and ($bp-md-min) {
+              left: -10px;
+              font-size: 50px;
+              top: -30px;
+            }
+            @media only screen and ($bp-lg-min) {
+              top: 2px;
+              left: -35px;
+            }
+            
+            @media only screen and ($bp-xxl-min) {
+              font-size: 60px;
+              top: -2px;
+            }
+          }
+        }
+        span.close-quote {
+
+          &:after {
+            @media only screen and ($bp-md-min) {
+              bottom: 5px;
+              font-size: 50px;
+            }
+            @media only screen and ($bp-xxl-min) {
+              font-size: 60px;
+            }
+          }
+        }
+      }
+
+      .name {
+        margin: 20px 0 5px 0;
+        font-size: 18px;
+        @media only screen and ($bp-md-min) {
+           font-size: 20px;
+        }
+      }
+    }
+
+    @media only screen and ($bp-md-min) {
+      padding: 30px;
+    }
+
+    @media only screen and ($bp-lg-min) {
+      padding: 60px;
+
+      &:first-child {
+        padding: 60px;
+      }
+      &:last-child {
+        padding-top: 90px;
+        padding-bottom: 205px;
+      }
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      padding: 90px;
+
+      &:first-child {
+        padding: 90px;
+      }
+    }
+
+    h1 {
+      margin-top: 0;
+      max-width: 400px;
+
+      @media only screen and ($bp-md-min) {
+        font-size: 50px;
+        line-height: 60px;
+        max-width: 550px;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        font-size: 65px;
+        line-height: 78px;
+        max-width: 670px;
+      }
+
+      @media only screen and ($bp-xxl-min) {
+        font-size: 80px;
+        line-height: 84px;
+        max-width: 880px;
+      }
+    }
+
+    h4 {
+      max-width: 400px;
+
+      @media only screen and ($bp-md-min) {
+        margin-top: 5px;
+        max-width: 550px;
+      }
+      @media only screen and ($bp-xl-min) {
+        max-width: 670px;
+      }
+      @media only screen and ($bp-xxl-min) {
+        font-size: 45px;
+        line-height: 54px;
+        max-width: 720px;
+      }
+    }
+
+    p.links {
+      margin: 15px 0 0;
+      a {
+        margin-bottom: 5px;
+
+        @media only screen and ($bp-xxl-min) {
+          font-size: 16px;
+        }
+      }
+
+      @media only screen and ($bp-md-min) {
+        margin-top: 0;
+        line-height: normal;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+.safari {
+  .c-header-careers {
+    padding: 0;
+  
+    &__row {
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}

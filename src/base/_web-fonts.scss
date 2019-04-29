@@ -1,0 +1,35 @@
+//
+// Web fonts
+// --------------------------------------------------
+
+@font-face{
+  font-family: "Apercu Light Pro";
+  src: url('/assets/fonts/apercu-light-pro.woff2') format('woff2'),
+       url('/assets/fonts/apercu-light-pro.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Apercu Bold Pro";
+  src: url('/assets/fonts/apercu-bold-pro.woff2') format('woff2'),
+       url('/assets/fonts/apercu-bold-pro.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Financier Display Light";
+  src: url('/assets/fonts/FinancierDisplayWeb-Light.woff2') format('woff2'),
+       url('/assets/fonts/FinancierDisplayWeb-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Financier Display Semibold";
+  src: url('/assets/fonts/FinancierDisplayWeb-Semibold.woff2') format('woff2'),
+       url('/assets/fonts/FinancierDisplayWeb-Semibold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

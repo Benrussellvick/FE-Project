@@ -1,0 +1,256 @@
+//
+// Audio / Video Player (plyr overrides)
+// --------------------------------------------------
+
+
+.plyr{
+
+  position: relative;
+
+  .plyr__poster-override-div{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+//plyr__control--overlaid
+  font-family:  $base-font-light;
+  font-weight: normal;
+
+  .plyr__controls{
+    background: $blue-tarawera;
+    padding: 10px;
+    color:white;
+    .plyr__control{
+      width:20px;
+      height:20px;
+      border-radius: 20px;
+      padding:0;
+      color: $blue-tarawera;
+      background: $orange-clementine;
+      svg{
+        margin: auto;
+        height:10px;
+        width:10px;
+      }
+      &:hover{
+        background: $blue-link-water;
+        color: $orange-clementine;
+      }
+      &[aria-pressed=false] .icon--not-pressed {
+        padding-left: 1px;
+      }
+    }
+    input[type='range']{
+      color: $orange-clementine;
+    }
+
+    .plyr__title{
+      font-variant-numeric: normal;
+      font-size:14px;
+      line-height: inherit;
+      margin-left: 10px;
+    }
+    .plyr__time{
+      line-height: normal;
+    }
+
+  }
+
+  .plyr__control--overlaid{
+    background: $orange-clementine;
+    &:hover{
+      background: $blue-link-water;
+    }
+    svg use{
+      color:white;
+    }
+    &:hover{
+      svg use{
+        color: $orange-clementine;
+      }
+    }
+  }
+}
+
+div.plyr-min-controls{
+  .plyr{
+    .plyr__controls{
+      padding: 6px 8px;
+      width: 93px;
+      max-height:30px;
+      -webkit-transition: width 0.3s ease-in-out;
+      -moz-transition: width 0.3s ease-in-out;
+      -o-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+      .plyr__control{
+        width: 18px;
+        height: 18px;
+        border-radius: 18px;
+        // svg{
+        //   height: 8px;
+        //   width: 8px;
+        // }
+      }
+      .plyr__progress, button[data-plyr="mute"], .plyr__volume, button[data-plyr="fullscreen"]{
+        display: none;
+      }
+    }
+    .plyr__time{
+      margin-left: 10px;
+      height: 12px;
+    } 
+
+    &.plyr--playing{
+
+      .plyr__controls{
+
+        width:100%;
+
+        .plyr__progress, button[data-plyr="mute"], .plyr__volume, button[data-plyr="fullscreen"]{
+          display: block;
+        }
+
+      }
+
+      .plyr__time{
+        margin-left: 5px;
+      } 
+
+    }
+
+  }
+}
+
+div.plyr-audio-controls{
+  .plyr{
+    .plyr__controls{
+      -webkit-transition: width 0.3s ease-in-out;
+      -moz-transition: width 0.3s ease-in-out;
+      -o-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+      .plyr__progress, button[data-plyr="mute"], .plyr__volume{
+        display: none;
+      }
+    }
+    .plyr__time{
+      margin-left: 5px;
+    } 
+
+    &.plyr--playing{
+
+      .plyr__controls{
+
+        width:100%;
+
+        .plyr__progress, button[data-plyr="mute"], .plyr__volume{
+          display: block;
+        }
+
+      }
+
+      .plyr__time{
+        margin-left: 5px;
+      } 
+
+    }
+
+  }
+}
+
+.plyr--audio {
+  &.plyr .plyr__controls .plyr__control[aria-pressed=false] {
+    background: none;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      display: block;
+      @include sprite(audio-black);
+    }
+
+    &:hover {
+      background: $orange-clementine;
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+div.plyr-hidden-controls{
+  .plyr{
+    .plyr__controls{
+      -webkit-transition: width 0.3s ease-in-out;
+      -moz-transition: width 0.3s ease-in-out;
+      -o-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+      .plyr__progress, button[data-plyr="mute"], .plyr__volume{
+        display: none;
+      }
+    }
+
+
+    &.plyr--playing{
+
+      .plyr__controls{
+
+        .plyr__progress, button[data-plyr="mute"], .plyr__volume{
+          display: block;
+        }
+
+      }
+
+
+
+    }
+
+  }
+}
+
+div.plyr-theme-black{
+  .plyr{
+    .plyr__controls{
+      background: black;
+      color:white;
+      .plyr__control{
+        color: black;
+        background: white;
+        &:hover{
+          // background: $blue-link-water;
+          // color: $orange-clementine;
+        }
+      }
+      input[type='range']{
+        //color: $orange-clementine;
+      }
+    }
+  }
+}
+
+.make-full-height{
+  //below not setup for YT or Vimeo embeds
+  .plyr, .plyr .plyr__video-wrapper{
+    height:100%;
+    position: relative;
+      .video-player{
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+  }
+}
+

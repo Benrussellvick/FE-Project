@@ -1,0 +1,174 @@
+//
+// Homepage Results Header
+// --------------------------------------------------
+
+.c-header-results .c-header-results__wrap {
+  @media only screen and ($bp-lg-min) {
+    min-height: auto;
+  }
+
+  @media only screen and ($bp-xxl-min) {
+    min-height: auto;
+  }
+}
+
+.c-header-results { 
+  padding: 0;
+
+  + .lazyLoad {
+    border-top: 1px solid $white;
+  }
+
+  &__wrap {
+    padding: 20px 15px 15px;
+
+    @media only screen and ($bp-md-min) {
+      padding: 30px;
+    }
+
+    @media only screen and ($bp-lg-min) {
+      padding: 45px 60px;
+    }
+
+    h1 {
+      font-size: 26px;
+      line-height: 32px;
+      margin-top: 0;
+
+      @media only screen and ($bp-md-min) {
+        max-width: none;
+        font-size: 35px;
+        line-height: 42px;
+        max-width: 400px;
+      }
+
+      @media only screen and ($bp-lg-min) {
+        font-size: 40px;
+        line-height: 48px;
+        max-width: none;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+
+      @media only screen and ($bp-xxl-min) {
+        font-size: 60px;
+        line-height: 72px;
+      }
+    }
+
+    h4 {
+      @media only screen and ($bp-md-min) {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 0;
+        max-width: 400px;
+      }
+
+      @media only screen and ($bp-lg-min) {
+        font-size: 24px;
+        line-height: 32px;
+        max-width: none;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+      @media only screen and ($bp-xxl-min) {
+        font-size: 35px;
+        line-height: 42px;
+      }
+    }
+
+    &-intro {
+      max-width: 400px;
+
+      + .row {
+        margin-top: 10px;
+      }
+
+      p {
+        margin-bottom: 0px;
+      }
+
+      @media only screen and ($bp-md-min) {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 0;
+      }
+
+      @media only screen and ($bp-lg-min) {
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 750px;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        font-size: 30px;
+        line-height: 36px;
+        max-width: none;
+      }
+
+      @media only screen and ($bp-xxl-min) {
+        font-size: 35px;
+        line-height: 42px;
+      }
+    }
+
+    .links {
+      // margin: 10px 0;
+      p {
+        margin-bottom: 0;
+      }
+      a {
+        display: block;
+        margin: 10px 0;
+
+        &:before{
+          width:11px; 
+          height:11px;
+        }
+        margin-bottom: 10px;
+
+        @media only screen and ($bp-xxl-min) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      @media only screen and ($bp-md-min) {
+        margin-top: 0;
+        line-height: normal;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        margin-top: 10px;
+      }
+    }
+
+    p.tag {
+      margin-bottom: 10px;
+
+      @media only screen and ($bp-md-min) {
+        margin-bottom: 15px;
+      }
+      @media only screen and ($bp-xl-min) {
+        font-size: 16px;
+      }
+    }
+
+    p.find-out-more{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+

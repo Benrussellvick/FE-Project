@@ -1,0 +1,321 @@
+// Theming
+// --------------------------------------------------
+
+.c-header-careers {
+    &__wrap {
+        background-color: $default-grey;
+
+        .c-pullquote {
+            blockquote {
+                span.open-quote {
+                    color: $default-lt-grey;
+                }
+                span.close-quote {
+                    color: $default-lt-grey;
+                }
+            }
+        }
+
+        &:first-child {
+            background-color: $black;
+        }
+
+        h4, h5, li, p {
+            color: $white;
+        }
+
+        h1 {
+            color: $default-lt-grey;
+        }
+
+        a {
+            color: $white;
+      
+            &:hover,
+            &:focus,
+            &:active {
+              color: $white;
+            }
+        }
+    } // end theme
+
+    //theme A - strong green sand
+    &.theme-a {
+        .c-header-careers__wrap {
+            background-color: $green-kaitoke;
+
+            .c-pullquote {
+                blockquote {
+                    span.open-quote {
+                        color: $yellow-sunflower;
+                    }
+                    span.close-quote {
+                        color: $yellow-sunflower;
+                    }
+                }
+            }
+    
+            &:first-child {
+                background-color: $green-zuccini;
+            }
+    
+            h4, h5, li, p {
+                color: $white;
+            }
+    
+            h1 {
+                color: $yellow-sunflower;
+            }
+    
+            a {
+                color: $white;
+          
+                &:hover,
+                &:focus,
+                &:active {
+                  color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme B - blue green lemon
+    &.theme-b {
+        .c-header-careers__wrap {
+            background-color: $green-mosque;
+
+            .c-pullquote {
+                blockquote {
+                    span.open-quote {
+                        color: $yellow-schoolbus;
+                    }
+                    span.close-quote {
+                        color: $yellow-schoolbus;
+                    }
+                }
+            }
+    
+            &:first-child {
+                background-color: $green-deep-teal;
+            }
+    
+            h4, h5, li, p {
+                color: $white;
+            }
+    
+            h1 {
+                color: $yellow-schoolbus;
+            }
+    
+            a {
+                color: $white;
+          
+                &:hover,
+                &:focus,
+                &:active {
+                  color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme C - dark blue sand
+    &.theme-c {
+        .c-header-careers__wrap {
+            background-color: $blue-sapphire;
+
+            .c-pullquote {
+                blockquote {
+                    span.open-quote {
+                        color: $yellow-mustard;
+                    }
+                    span.close-quote {
+                        color: $yellow-mustard;
+                    }
+                }
+            }
+    
+            &:first-child {
+                background-color: $green-dark;
+            }
+    
+            h4, h5, li, p {
+                color: $white;
+            }
+    
+            h1 {
+                color: $yellow-mustard;
+            }
+    
+            a {
+                color: $white;
+          
+                &:hover,
+                &:focus,
+                &:active {
+                  color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme D - blue orange
+    &.theme-d {
+        .c-header-careers__wrap {
+            background-color: $blue-tarawera;
+
+            .c-pullquote {
+                blockquote {
+                    span.open-quote {
+                        color: $orange-clementine;
+                    }
+                    span.close-quote {
+                        color: $orange-clementine;
+                    }
+                }
+            }
+    
+            &:first-child {
+                background-color: $blue-gem;
+            }
+    
+            h4, h5, li, p {
+                color: $white;
+            }
+    
+            h1 {
+                color: $orange-clementine;
+            }
+    
+            a {
+                color: $white;
+          
+                &:hover,
+                &:focus,
+                &:active {
+                  color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme E - navy orange
+    &.theme-e {
+        .c-header-careers__wrap {
+            background-color: $blue-midnight;
+
+            .c-pullquote {
+                blockquote {
+                    span.open-quote {
+                        color: $orange-clementine;
+                    }
+                    span.close-quote {
+                        color: $orange-clementine;
+                    }
+                }
+            }
+    
+            &:first-child {
+                background-color: $blue-navy;
+            }
+    
+            h4, h5, li, p {
+                color: $white;
+            }
+    
+            h1 {
+                color: $orange-clementine;
+            }
+    
+            a {
+                color: $white;
+          
+                &:hover,
+                &:focus,
+                &:active {
+                  color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme F - red violet light orange
+    &.theme-f {
+        .c-header-careers__wrap {
+            background-color: $purple-palatinate;
+
+            .c-pullquote {
+                blockquote {
+                    span.open-quote {
+                        color: $yellow-selective;
+                    }
+                    span.close-quote {
+                        color: $yellow-selective;
+                    }
+                }
+            }
+    
+            &:first-child {
+                background-color: $purple-blackberry;
+            }
+    
+            h4, h5, li, p {
+                color: $white;
+            }
+    
+            h1 {
+                color: $yellow-selective;
+            }
+    
+            a {
+                color: $white;
+          
+                &:hover,
+                &:focus,
+                &:active {
+                  color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme G - dark red light orange
+    &.theme-g {
+        .c-header-careers__wrap {
+            background-color: $purple-red;
+
+            .c-pullquote {
+                blockquote {
+                    span.open-quote {
+                        color: $yellow-selective;
+                    }
+                    span.close-quote {
+                        color: $yellow-selective;
+                    }
+                }
+            }
+    
+            &:first-child {
+                background-color: $purple-tyrian;
+            }
+    
+            h4, h5, li, p {
+                color: $white;
+            }
+    
+            h1 {
+                color: $yellow-selective;
+            }
+    
+            a {
+                color: $white;
+          
+                &:hover,
+                &:focus,
+                &:active {
+                  color: $white;
+                }
+            }
+        }
+    } // end theme
+}

@@ -1,0 +1,110 @@
+//
+// People
+// --------------------------------------------------
+
+.c-people {
+
+  .row {
+    @media only screen and ($bp-xxl-min) {
+      &:before,
+      &:after {
+        display: none;
+      }
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    padding-left: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+
+    @media only screen and ($bp-md-min) {
+      padding-left: 100px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    @media only screen and ($bp-lg-min) {
+      width: 370px;
+      padding-left: 100px;
+    }
+
+    @media only screen and ($bp-xl-min) {
+      padding-left: 110px;
+      width: 430px;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      padding-left: 160px;
+      width: 50%;
+      min-height: 120px;
+    }
+
+    > span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-border-radius: 25px 25px 25px 25px;
+      border-radius: 25px 25px 25px 25px;
+      overflow: hidden;
+
+      @media only screen and ($bp-md-min) {
+        -webkit-border-radius: 35px 35px 35px 35px;
+        border-radius: 35px 35px 35px 35px;
+
+        img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      @media only screen and ($bp-lg-min) {
+        -webkit-border-radius: 40px 40px 40px 40px;
+        border-radius: 40px 40px 40px 40px;
+
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      @media only screen and ($bp-xxl-min) {
+        -webkit-border-radius: 60px 60px 60px 60px;
+        border-radius: 60px 60px 60px 60px;
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+
+    .person {
+      font-family: $body-font-semibold;
+      font-size: 20px;
+      margin-bottom: 5px;
+
+      @media only screen and ($bp-md-min) {
+        font-size: 26px;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        font-size: 30px;
+      }
+
+      @media only screen and ($bp-xxl-min) {
+        font-size: 35px;
+      }
+    }
+
+    .caption {
+      max-width: 280px;
+    }
+  }
+}
+

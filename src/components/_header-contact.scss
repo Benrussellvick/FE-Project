@@ -1,0 +1,160 @@
+//
+// Header contacts
+// --------------------------------------------------
+
+[class^=c-header-] [class$=__wrap] {
+  @media only screen and ($bp-lg-min) {
+    min-height: 550px;
+  }
+
+  @media only screen and ($bp-xxl-min) {
+    min-height: 650px;
+  }
+}
+
+.c-header-contacts {
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+
+  &__row {
+    @media only screen and ($bp-md-min) {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  &__wrap {
+    padding: 15px 15px 0;
+
+    @media only screen and ($bp-md-min) {
+      padding: 30px;
+    }
+
+    @media only screen and ($bp-lg-min) {
+      padding: 60px 45px 60px 60px;
+    }
+
+    @media only screen and ($bp-xl-min) {
+      padding: 60px;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      padding: 90px;
+    }
+
+    ul { 
+      margin-bottom: 20px;
+      li {
+        list-style-type: none;
+        margin: 0 0 2px 0;
+        font-size: 20px;
+        line-height: 26px;
+
+        @media only screen and ($bp-lg-min) {
+          font-size: 24px;
+          line-height: 36px;
+        }
+
+        @media only screen and ($bp-xxl-min) {
+          font-size: 30px;
+          line-height: 36px;
+        }
+
+        &:before {
+          display: none;
+        }
+
+        &.phone {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    h1, li, p {
+      max-width: 400px;
+
+      @media only screen and ($bp-xxl-min) {
+        max-width: 435px;
+      }
+    }
+
+    h1 {
+      font-size: 35px;
+      line-height: 42px;
+
+      @media only screen and ($bp-md-min) {
+        font-size: 35px;
+        line-height: 40px;
+        margin-top: 10px;
+      }
+
+      @media only screen and ($bp-lg-min) {
+        font-size: 45px;
+        line-height: 45px;
+      }
+
+      @media only screen and ($bp-xl-min) {
+        font-size: 65px;
+        line-height: 78px;
+      }
+
+      @media only screen and ($bp-xxl-min) {
+        font-size: 80px;
+        line-height: 88px;
+      }
+    }
+
+    p.tag {
+      margin-bottom: 15px;
+
+      @media only screen and ($bp-md-min) {
+        margin-top: 30px;
+      }
+      @media only screen and ($bp-lg-min) {
+        margin-top: 35px;
+      }
+      @media only screen and ($bp-xl-min) {
+        font-size: 16px;
+      }
+    }
+
+    small {
+      font-size: 20px;
+      line-height: 26px;
+
+      @media only screen and ($bp-lg-min) {
+        font-size: 26px;
+        line-height: 32px;
+      }
+      @media only screen and ($bp-xl-min) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+      @media only screen and ($bp-xxl-min) {
+        font-size: 35px;
+        line-height: 42px;
+      }
+    }
+
+    a {
+      &.link-internal {
+        @media only screen and ($bp-xxl-min) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.safari {
+  .c-header-contacts {
+    padding: 0;
+  
+    &__row {
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}

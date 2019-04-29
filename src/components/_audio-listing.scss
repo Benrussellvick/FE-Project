@@ -1,0 +1,156 @@
+//
+// Audio Listing 
+// --------------------------------------------------
+
+.c-audio-listing{
+  
+  @media only screen and ($bp-lg-min) {
+    padding:0 60px;
+  }
+
+  .row{
+    // display: flex;
+    // flex-wrap: wrap;
+
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @media only screen and ($bp-lg-min) {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+
+    @media only screen and ($bp-xl-min) {
+      margin-right: -20px;
+      margin-left: -20px;
+    }
+
+    // &:after {
+    //   display: none;
+    // }
+  }
+
+
+  @media only screen and ($bp-sm-min) {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .row > [class*='col-'] {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  a{
+    display: block;
+    text-decoration: none;
+    &:hover, &:focus {
+      .c-audio-listing__text-wrapper {
+        .c-audio-listing__heading {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .c-audio-listing__wrapper{
+
+    width: 100%;
+    padding: 0 15px;
+    margin: 15px 0;
+
+
+    @media only screen and ($bp-lg-min) {
+      padding: 0 15px;
+      margin: 15px 0;
+    }
+
+    .c-audio-listing__media-wrapper{
+      margin-bottom: 15px;
+      position: relative;
+      pointer-events: none;
+
+      background-color: $wild-sand;
+      // background-image: url('../../img/WPP-logo-black.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 77px auto;// to match the header logo?! 
+
+      // min-height: 191px;
+
+      // @media only screen and ($bp-md-min) {
+      //   height: 191px;
+      // }
+      // @media only screen and ($bp-lg-min) {
+      //   height: 110px;
+      // }
+      // @media only screen and ($bp-xl-min) {
+      //   height: 160px;
+      // }
+      // @media only screen and ($bp-xxl-min) {
+      //   height:209px;
+      // }
+
+      .c-audio-listing__figure{
+
+          background-color: $wild-sand;
+          padding-top: 56.25%;
+          img{
+            max-height:100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+          }
+
+      }
+
+      .c-audio-listing__audio-wrapper{
+        position: absolute;
+        bottom:0;
+      }
+
+    }
+
+    .c-audio-listing__text-wrapper {
+      padding-right: 15px;
+      @media only screen and ($bp-lg-min) {
+        padding-right: 30px;
+      }
+    }
+
+    .c-audio-listing__heading{
+      font-family: $body-font-semibold;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      @media only screen and ($bp-sm-max) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+
+  }
+
+}
+
+
+.safari {
+  .c-audio-listing {
+    @media only screen and ($bp-md-min) {
+      .row > [class*='col-'] {
+        -webkit-flex: 1 1 49%;
+        max-width:  49%;
+      }
+    }
+  
+    @media only screen and ($bp-lg-min) {
+      .row > [class*='col-'] {
+        -webkit-flex: 1 1 24%;
+        max-width:  24%;
+      }
+    }
+  }
+}

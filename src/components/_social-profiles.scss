@@ -1,0 +1,135 @@
+//
+// Social profiles
+// --------------------------------------------------
+
+.c-social-profiles {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 0;
+
+  &__list-item {
+    margin-left: 0;
+    float: left;
+    margin-bottom: 8px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:before {
+      content: "";
+    }
+  }
+
+  &__link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .25s ease-out;
+
+    &--facebook {
+      .c-social-profiles__icon {
+        @include sprite(facebook-black);
+        width: 8px;
+        height: 14px;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $black;
+
+        .c-social-profiles__icon {
+          @include sprite(facebook-white);
+          width: 8px;
+          height: 14px;
+        }
+      }
+    }
+
+    &--twitter {
+      .c-social-profiles__icon {
+        @include sprite(twitter-black);
+        width: 15px;
+        height: 12px;
+      }
+      
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $black;
+
+        .c-social-profiles__icon {
+          @include sprite(twitter-white);
+          width: 15px;
+          height: 12px;
+        }
+      }
+    }
+
+    &--linkedin {
+      .c-social-profiles__icon {
+        @include sprite(linkedin-black);
+        width: 12px;
+      }
+      
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $black;
+
+        .c-social-profiles__icon {
+          @include sprite(linkedin-white);
+          width: 12px;
+        }
+      }
+    }
+
+    &--youtube {
+      .c-social-profiles__icon {
+        @include sprite(youtube-black);
+        width: 18px;
+        height: 13px;
+      }
+      
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $black;
+
+        .c-social-profiles__icon {
+          @include sprite(youtube-white);
+          width: 18px;
+          height: 13px;
+        }
+      }
+    }
+
+    &--instagram {
+      .c-social-profiles__icon {
+        @include sprite(instagram-black);
+        width: 16px;
+        height: 17px;
+      }
+      
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $black;
+
+        .c-social-profiles__icon {
+          @include sprite(instagram-white);
+          width: 16px;
+          height: 17px;
+        }
+      }
+    }
+
+  }
+
+
+}

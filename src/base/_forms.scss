@@ -1,0 +1,390 @@
+//
+// Forms
+// --------------------------------------------------
+form,
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+// placeholder
+:-moz-placeholder {
+  color: $keyline;
+}
+
+::-webkit-input-placeholder {
+  color: $keyline;
+}
+
+:-ms-input-placeholder {
+  color: $keyline;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: inherit;
+  color: $text-color;
+  border: 0;
+  border-bottom: 1px solid $keyline;
+}
+
+label {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: $base-font-light;
+  // transition: all 0.25s linear;
+  @include transition(transition, transform .25s linear);
+  padding: 6px 0;
+}
+
+input,
+select,
+textarea {
+  color: $text-color;
+  border-radius: 0;
+  border: none;
+  border-bottom: solid 1px $keyline;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: $base-font-light;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  outline: none;
+  transition: all 0.25s linear;
+  -webkit-appearance: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+textarea {
+  min-height: 34px;
+  height: auto;
+  max-width: 100%;
+  padding: 6px 0;
+  &:required + label {
+    position: relative;
+    padding-top:20px;
+    &:after {
+      content: 'Required';
+      text-transform: uppercase;
+      font-size: 10px;
+      position: absolute;
+      right: 0;
+      bottom: 3px;
+      margin: auto;
+      display: block;
+      color: $text-grey;
+      opacity: 0.8;
+      // transition: all 0.25s linear;
+      @include transition(transition, all .25s linear);
+    }
+  }
+}
+textarea:focus + label:after {
+  opacity: 0;
+}
+
+input {
+  padding: 6px 0;
+  &::placeholder {
+    opacity: 0;
+  }
+  &:-ms-input-placeholder {
+    opacity: 1;
+  }
+  &:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+  &:focus {
+    &::placeholder {
+      opacity: 0.8;
+    }
+  }
+  &:placeholder-shown + label {
+    cursor: text;
+    // max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem);
+  }
+  &:not(:placeholder-shown) + label,
+  &:focus + label {
+    transform: translate(0, 0);
+    cursor: pointer;
+    padding: 6px 0;
+  }
+  
+  &:required + label {
+    position: relative;
+    &:after {
+      content: 'Required';
+      text-transform: uppercase;
+      font-size: 10px;
+      position: absolute;
+      right: 0;
+      bottom: 3px;
+      margin: auto;
+      display: block;
+      color: $text-grey;
+      opacity: 0.8;
+      @include transition(transition, opacity .25s linear);
+    }
+  }
+}
+input:focus + label:after {
+  opacity: 0;
+}
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+
+// layout ---------------------------------------
+.form-group {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+  &__footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    .button {
+      width: 48.5%
+    }
+    @media only screen and ($bp-sm-min) {
+      justify-content: initial;
+      display: block;
+      .button {
+        width: auto;
+      }
+    }
+  }
+  .error-message {
+    display: none;
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+}
+
+// textarea.form-control {
+//   // height: 34px;
+//   // max-width: 100%;
+// }
+
+.control-label {
+  display: inline-block;
+}
+
+// error style ----------------------------------
+.error {
+  &.form-control {
+    // background: lighten($error, 45%);
+    border-bottom: solid 1px $error;
+  }
+  .control-label {
+    color: $error;
+    @include transition(transition, opacity .25s linear);
+  } // placeholder
+  :-moz-placeholder {
+    color: $error;
+  }
+  ::-webkit-input-placeholder {
+    color: $error;
+  }
+  :-ms-input-placeholder {
+    color: $error;
+  }
+  &:focus + label:after {
+    opacity: 1;
+  }
+}
+.error + .error-message + .control-label {
+  color: $error;
+  position: relative;
+  &:after {
+    opacity: 1;
+    content: 'Required';
+    text-transform: uppercase;
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    margin: auto;
+    display: block;
+    color: $error;
+    opacity: 0.8 !important;
+    @include transition(transition, opacity .25s linear);
+  }
+}
+
+
+// buttons --------------------------------------
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"], 
+input[type="radio"] {
+  cursor: pointer;
+  outline: 0;
+}
+
+
+// radio buttons --------------------------------------
+.radio {
+  display: block;
+  label {
+    user-select: none;
+    padding-left: 35px;
+    position: relative;
+    cursor: pointer;
+    &:hover input ~ .check {
+      &:after {
+        opacity: 1;
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 17px;
+        height: 17px;
+        background: $black;
+      }
+    }
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    &:checked ~ .check:after {
+      opacity: 1;
+    }
+    &:focus + .check {
+      &:after {
+        opacity: 1;
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 17px;
+        height: 17px;
+        background: $black;
+      }
+    }
+  }
+  span.check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 27px;
+    width: 27px;
+    background-color: $white;
+    border: 1px solid $black;
+    @include transition(transition, all .25s linear);
+    &:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      top: 4px;
+      left: 4px;
+      width: 17px;
+      height: 17px;
+      background: $black;
+      @include transition(transition, all .25s linear);
+    }
+  }
+}
+
+// checkboxes --------------------------------------
+.checkbox {
+  display: block;
+  label {
+    user-select: none;
+    padding-left: 35px;
+    position: relative;
+    cursor: pointer;
+    &:hover input ~ .check {
+      &:after {
+        opacity: 1;
+        content: "";
+        left: 9px;
+        top: 6px;
+        width: 4px;
+        height: 9px;
+        border: solid $black;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    &:checked ~ .check:after {
+      opacity: 1;
+    }
+    // &:focus + .check {
+    //   &:after {
+    //     opacity: 1;
+    //     content: "";
+    //     left: 9px;
+    //     top: 6px;
+    //     width: 4px;
+    //     height: 9px;
+    //     border: solid $black;
+    //     border-width: 0 2px 2px 0;
+    //     transform: rotate(45deg);
+    //   }
+    // }
+  }
+  span.check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 27px;
+    width: 27px;
+    background-color: $white;
+    border: 1px solid $black;
+    @include transition(transition, all .25s linear);
+    &:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      left: 9px;
+      top: 6px;
+      width: 4px;
+      height: 9px;
+      border: solid $black;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      @include transition(transition, all .25s linear);
+    }
+  }
+}

@@ -1,0 +1,58 @@
+//
+// Article footer
+// --------------------------------------------------
+
+.c-article-footer {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  padding-top: 30px;
+
+  @media only screen and ($bp-md-min) {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 60px 0 20px 0;
+  }
+
+  @media only screen and ($bp-xxl-min) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  &__section {
+    border-top: 1px solid $keyline;
+    padding: 15px 0 8px 0;
+  }
+
+  &__heading {
+    margin-bottom: 25px;
+
+    @media only screen and ($bp-xxl-min) {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    &.tag {
+      margin-top: 40px;
+      @media only screen and ($bp-lg-min) {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &__author-row {
+    margin-bottom: 40px;
+  }
+
+  &__author-img-col {
+    display: none;
+
+    @media only screen and ($bp-lg-min) {
+      display: block;
+    }
+  }
+
+  &__author-img {
+    float: right;
+  }
+
+}

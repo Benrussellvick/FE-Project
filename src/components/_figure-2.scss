@@ -1,0 +1,61 @@
+//
+// Figure 2
+// --------------------------------------------------
+
+.c-figure-2 {
+  padding: 0 15px;
+
+  @media only screen and ($bp-md-min) {
+    padding: 0 30px;
+    display: flex;
+  }
+  
+  @media only screen and ($bp-lg-min) {
+    padding: 0 60px;
+  }
+  
+  @media only screen and ($bp-xxl-min) {
+    padding: 0 90px;
+  }
+  
+  &__figure {
+    margin-bottom: 10px;
+
+    @media only screen and ($bp-md-min) {
+      width: 50%;
+      border-right: 1px solid transparent;
+    }
+  }
+
+  &__figcaption {
+    font-family: $base-font-light;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px 0;
+
+    // @media only screen and ($bp-md-min) {
+    //   padding: 20px 0;
+    // }
+
+    // @media only screen and ($bp-xl-min) {
+    //   padding: 15px 0;
+    // }
+
+    // @media only screen and ($bp-xxl-min) {
+    //   font-size: 16px;
+    // }
+
+    @media only screen and ($bp-md-min) {
+      padding: 15px 0;
+    }
+
+    // @media only screen and ($bp-xl-min) {
+    //   padding: 15px 0;
+    // }
+
+    @media only screen and ($bp-xxl-min) {
+      padding: 20px 0;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+//
+// Resource
+// --------------------------------------------------
+
+.c-resource {
+  display: inline-block;
+  width: 100%;
+
+  padding: 25px 15px 15px;
+  @media only screen and ($bp-md-min) {
+    padding: 30px;
+  }
+  @media only screen and ($bp-lg-min) {
+    padding: 60px 30px;
+  }
+
+  @media only screen and ($bp-xxl-min) {
+    padding: 90px 30px;
+  }
+
+  &__pdfs {
+    padding-left: 30px;
+    .link-download {
+      margin-top: 20px;
+      // align-self: flex-end;
+    }
+
+    // @media only screen and ($bp-sm-min) {
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .row > [class*='col-'] {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    // }
+
+  }
+  &__item {
+    margin-bottom: 30px;
+    @media only screen and ($bp-md-min) {
+      margin-bottom: 0;
+    }
+    padding-right: 30px;
+    picture {
+      // align-self: flex-start;
+      img {
+        max-width: 100%;
+        max-height: 160px;
+      }
+    }
+  }
+  &__side-menu {
+    @media only screen and ($bp-md-max) {
+      padding-top: 30px;
+    }
+    .tag {
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: normal;
+    }
+
+    &-list {
+      padding-left: 30px;
+      margin-bottom: 30px;
+
+      @media only screen and ($bp-md-min) {
+        margin-bottom: 60px;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.safari {
+  .c-resource__pdfs {
+    @media only screen and ($bp-md-min) {
+      .row > [class*='col-'] {
+        -webkit-flex: 1 1 49%;
+        max-width:  49%;
+      }
+    }
+  
+    @media only screen and ($bp-lg-min) {
+      .row > [class*='col-'] {
+        -webkit-flex: 1 1 24%;
+        max-width:  24%;
+      }
+    }
+  }
+}

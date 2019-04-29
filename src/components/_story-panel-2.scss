@@ -1,0 +1,333 @@
+//
+// Story panel 2
+// --------------------------------------------------
+
+.c-story-panel-2 {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #FFF;
+  
+  @include clearfix();
+
+  &__tag {
+    padding: 30px 0;
+    border-top: 1px solid $keyline;
+    margin: 0 15px;
+
+    @media only screen and ($bp-md-min) {
+      margin: 0 30px;
+    }
+
+    @media only screen and ($bp-lg-min) {
+      margin: 0 60px;
+    }
+
+    @media only screen and ($bp-xl-min) {
+      padding: 56px 0;
+      margin: 0 60px;
+    }
+  }
+
+  &__wrapper {
+    @media only screen and ($bp-md-min) {
+      background: $keyline;
+    }
+  }
+
+  &__tag-link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  &__wrapper {
+    min-width: 100%;
+    @media only screen and ($bp-md-min) {
+      display: flex;
+    }
+  }
+
+  &__article {
+    @media only screen and ($bp-sm-max) {
+      // background-image: none !important;
+      position: relative;
+    }
+  
+    @media only screen and ($bp-md-min) {
+      position: relative;
+      background-color: $offwhite;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: flex-end;
+      // min-height: 384px;
+      width: 50%;
+      // float: left;
+      // background-size: cover;
+      // background-repeat: no-repeat;
+      // background-position: right center;
+    }
+  
+    // @media only screen and ($bp-lg-min) {
+    //   min-height: 375px;
+    // }
+  
+    // @media only screen and ($bp-xl-min) {
+    //   min-height: 415px;
+    // }
+  
+    // @media only screen and ($bp-xxl-min) {
+    //   min-height: 540px;
+    // }
+
+    &:first-child {
+      @media only screen and ($bp-md-min) {
+        border-right: 1px solid $white;
+      }
+    }
+  }
+
+  &__article-link {
+    padding: 15px 15px 30px 15px;
+    max-width: 500px;
+    margin: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+
+    @media only screen and ($bp-md-min) {
+      padding: 30px;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    @media only screen and ($bp-lg-min) {
+      width: 75%;
+      // padding: 60px;
+      padding: 60px 30px 60px 60px;
+      max-width: 420px;
+    }
+
+    @media only screen and ($bp-xl-min) {
+      max-width: 450px;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      max-width: 600px;
+      padding: 90px;
+    }
+    
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      
+      @media only screen and ($bp-md-min) {
+        color: $white;
+      }
+    }
+
+    &--negative {
+      .c-story-panel-2__heading,
+      .c-story-panel-2__intro {
+        @media only screen and ($bp-md-min) {
+          color: $black;
+        }
+      }
+
+      // &:link,
+      // &:visited {
+      //   text-decoration: none;
+      // }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $black;
+      }
+    }
+  }
+  
+  &__text-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    @media only screen and ($bp-sm-max) and (min-height: 550px) {
+      @include scrimGradient(#000, 'to top');
+    }
+
+    @media only screen and ($bp-md-min) {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    @media only screen and ($bp-sm-max) and (max-height: 550px) {
+      // position: absolute;
+      bottom: 0;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      position: relative;
+      background: $white;
+      .c-story-panel-2__article-link {
+        padding-top: 15px;
+        padding-bottom: 60px;
+      }
+      .c-story-panel-2__horizontal-gradient,
+      .c-story-panel-2__vertical-gradient {
+        display: none;
+      }
+      .c-story-panel-2__heading,
+      .c-story-panel-2__intro {
+        color: black;
+      }
+    }
+    
+  }
+  
+  &__heading {
+    font-size: 26px;
+    line-height: 32px;
+    color: $white;
+    
+    @media only screen and ($bp-sm-max) and (max-height: 550px) {
+      color: $black;
+    }
+
+    // @media only screen and ($bp-md-min) {
+    //   color: $white;
+    // }
+
+    @media only screen and ($bp-xl-min) {
+      font-size: 35px;
+      line-height: 40px;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+  
+  &__intro {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 26px;
+    color: $white;
+    
+    @media only screen and ($bp-sm-max) and (max-height: 550px) {
+      color: $black;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    // @media only screen and ($bp-md-min) {
+    //   color: $white;
+    // }
+    
+    @media only screen and ($bp-xl-min) {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+
+  &__horizontal-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    @media only screen and ($bp-md-min) {
+      @include scrimGradient(#000, 'to top');
+
+      &__white {
+        @include scrimGradient(#FFF, 'to top');
+      }
+
+      &--25 {
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 100%);
+      }
+  
+      &--50 {
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.50) 100%);
+      }
+    }
+
+    // @media only screen and ($bp-xl-min) {
+    //   height: 400px;
+    // }
+
+  }
+
+  &__vertical-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    @media only screen and ($bp-md-min) {
+      width: 50%;
+      @include scrimGradient(#000, 'to right');
+
+      &__white {
+        @include scrimGradient(#FFF, 'to right');
+      }
+      &--25 {
+        background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 100%);
+      }
+  
+      &--50 {
+        background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.50) 100%);
+      }
+    }
+
+  }
+
+
+  &__picture {
+    // @media only screen and ($bp-md-min) {
+    //   display: none;
+    // }
+    img {
+      object-fit: cover;
+      /* min-height: 100%; */
+      max-width: 100%;
+      // height: 100%;
+      min-width: 100%;
+      max-height: 100%;
+      // position: absolute;
+    }
+  }
+
+  &__media-wrapper {
+
+    @media only screen and ($bp-sm-max) {
+      position: relative;
+      // min-height: 260px;
+      background-color: $offwhite;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+//
+// Carousel
+// --------------------------------------------------
+
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    /* Fix of Webkit flickering */
+    z-index: 1;
+    &-vertical > .swiper-wrapper {
+        flex-direction: column;
+    }
+    .swiper-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+        box-sizing: content-box;
+        .swiper-slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition-property: transform;
+        }
+    }
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    // margin: 0 0 30px;
+    padding-top: 40px;
+    @media only screen and ($bp-sm-min) {
+        padding-top: 0;
+    }
+    .swiper-slide {
+        overflow: hidden;
+        font-size: 18px;
+        background: $white;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .swiper-slide--caption {
+            float: left;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 22px;
+            font-family: $base-font-light;
+            padding: 15px 0;
+            @media only screen and ($bp-sm-min) {
+                max-width: 80%;
+            }
+        }
+        img {
+            min-width: 100%;
+        }
+    }
+    
+    .swiper-controls {
+        float: right;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        z-index: 1;
+        background: $white;
+        @media only screen and ($bp-sm-min) {
+            top: auto;
+            bottom: 10px;
+        }
+        @media only screen and ($bp-md-min) {
+            top: calc(100% - 45px);
+        }
+        .swiper-button {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            padding: 13px 10px;
+            @include transition(transition, all .25s ease-in-out);
+            @media only screen and ($bp-md-min) {
+                padding: 18px 10px;
+            }
+            &:after {
+                @include sprite(carousel-chevron-black);
+                position: absolute;
+                content: '';
+                right: 0;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                margin: auto;
+                display: block;
+            }
+            &.swiper-button-prev {
+                float: left;
+                top: -1px;
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+            &.swiper-button-next {
+                float: right;
+                bottom: -1px;
+            }
+            &.swiper-button-disabled {
+                opacity: 0.2;
+            }
+        }
+        .swiper-pagination {
+            display: inline-block;
+            padding: 1px 10px;
+            // height: 36px;
+            span {
+                font-size: 18px;
+                line-height: 25px;
+                font-family: $base-font-light;
+            }
+        }
+    }
+
+    // Full width carousel
+    &__wide {
+        // width: calc(100% + 30px);
+        // margin-left: -15px;
+        .swiper-slide {
+            .swiper-slide--caption {
+                padding: 15px;
+            }
+        }
+        .swiper-controls {
+            padding-right: 15px;
+        }
+    }
+
+    // Wide carousel
+}

@@ -1,0 +1,77 @@
+//
+// Sitecore edit Mode 
+// --------------------------------------------------
+
+i{
+	background-image: url('/-/icon/People/16x16/pencil.png');
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	font-size: 16px;
+	padding-left:20px;
+}
+
+i.edit-item
+{
+	background-image: url('/-/icon/people/16x16/cubes_blue.png');
+}
+i.message{
+	background-image: url('/-/icon/Business/16x16/message.png');
+}
+
+.sc-editmode:hover
+{
+	animation: sitecore-edit 1s;
+}
+
+@keyframes sitecore-edit {
+  0%,100% {
+  }
+  25%,75% {
+    background: #FFFFE0;
+  }
+}
+
+.scSpeakWebEditRibbon.scWebEditRibbon.scFixedRibbon {
+
+}
+#scWebEditRibbon {
+	[class^=sc] img {
+		display: inline-block;
+	}
+}
+
+.sc_LargeDropDownButton_DropDownItemsContainer .sc_DropDownItem .sc_DropDownItemImage {
+	display: inline-block;
+}
+
+[class^=sc].scChromeDropDown img {
+	display: inline-block;
+}
+
+#commandRow {
+	[class^=sc] img {
+		display: inline-block;
+	}
+}
+
+.sitecore-edit-custom {
+
+	// [class^=c-story-panel-] [class$=__horizontal-gradient]  {
+	// 	display: none;
+	// }
+
+	.c-story-panel-1, .c-story-panel-2__article, .c-story-panel-3__article, .c-story-panel-3-small__article {
+		border: 3px dashed orangered;
+	}
+
+	.c-story-panel-3 {
+		&.c-story-panel-3--video .c-story-panel-3__video {
+			position: relative;
+		}
+
+		article.c-story-panel-3-small__article .c-story-panel-3-small__media-wrapper {
+			height: auto;
+		}
+	}
+
+}

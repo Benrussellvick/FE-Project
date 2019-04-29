@@ -1,0 +1,408 @@
+//
+// Large figures
+// --------------------------------------------------
+.pink-bg {
+  background-color: $pink-bg;
+}
+.c-large-figures {
+
+  // start alternate
+  &__alternate {
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+    @media only screen and ($bp-md-min) {
+      margin-bottom: 10px;
+  
+      &.c-large-figures__two-up {
+        margin-top: 50px;
+      }
+      &.c-large-figures__three-up {
+        margin-top: 30px;
+      }
+      &.c-large-figures__one-up {
+        margin-top: 30px;
+      }
+    }
+
+    @media only screen and ($bp-lg-min) {
+      &.c-large-figures__two-up {
+        margin-top: 65px;
+        margin-bottom: 30px;
+      }
+      &.c-large-figures__three-up {
+        margin-top: 35px;
+        margin-bottom: 15px;
+      }
+      &.c-large-figures__one-up {
+        margin-top: 35px;
+        margin-bottom: 15px;
+      }
+    }
+
+    @media only screen and ($bp-xl-min) {
+      &.c-large-figures__two-up {
+        margin-top: 90px;
+        margin-bottom: 60px;
+      }
+      &.c-large-figures__three-up {
+        margin-top: 60px;
+        margin-bottom: 40px;
+      }
+      &.c-large-figures__one-up {
+        margin-top: 60px;
+        margin-bottom: 40px;
+      }
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      &.c-large-figures__two-up {
+        margin-top: 145px;
+        margin-bottom: 90px;
+      }
+      &.c-large-figures__three-up {
+        margin-top: 85px;
+        margin-bottom: 90px;
+      }
+      &.c-large-figures__one-up {
+        margin-top: 85px;
+        margin-bottom: 90px;
+      }
+    }
+  } 
+  // end alternate
+
+  // start caption
+  .caption {
+    padding-top: 10px;
+    line-height: 18px;
+
+    @media only screen and ($bp-md-min) {
+      padding-top: 5px;
+    }
+  }
+
+  &__four-up {
+    .caption {
+      @media only screen and ($bp-lg-min) {
+        padding-top: 10px;
+      }
+    }
+  }
+  
+  &__three-up {
+    .caption {
+      @media only screen and ($bp-md-min) {
+        padding-top: 10px;
+      }
+      @media only screen and ($bp-lg-min) {
+        padding-top: 15px;
+      }
+    }
+  }
+
+  &__two-up {
+    .caption {
+      @media only screen and ($bp-md-min) {
+        padding-top: 0;
+      }
+      @media only screen and ($bp-lg-min) {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &__one-up {
+
+    .c-large-figures__wrap-offset {
+      text-align: left;
+    }
+
+    @media only screen and ($bp-md-min) {
+      text-align: center;
+    }
+
+    .caption {
+      @media only screen and ($bp-md-min) {
+        padding-top: 15px;
+      }
+      @media only screen and ($bp-lg-min) {
+        padding-top: 20px;
+      }
+    }
+  }
+  // end caption
+
+  // start flex rules
+  @media only screen and ($bp-md-min) {
+    margin-bottom: 35px;
+
+    &__three-up,
+    &__four-up {
+      .row {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &:after,
+        &:before {
+            content: none;
+        }
+
+        .c-large-figures__wrap {
+          width: 200px;
+        }
+      }
+    }
+  } 
+
+  @media only screen and ($bp-lg-min) {
+    &__three-up {
+      .row {
+        flex-wrap: wrap; 
+        .c-large-figures__wrap {
+          width: 260px;
+
+          &-offset {
+            width: 194px;
+          }
+        }
+      }
+    }
+    &__two-up {
+      .row {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        &:after,
+        &:before {
+            content: none;
+        }
+
+        .c-large-figures__wrap {
+          width: 240px;
+        }
+
+        &.flex-left {
+          justify-content: flex-start;
+
+          .c-large-figures__wrap {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+  // end flex rules
+
+  @media only screen and ($bp-xl-min) {
+    margin-bottom: 80px;
+  }
+
+  &__wrap {
+    margin-bottom: 5px;
+
+    @media only screen and ($bp-md-min) {
+      padding-right: 20px;
+    }
+
+    .spec-title {
+      font-size: 20px;
+      padding-bottom: 5px;
+      line-height: normal;
+
+      @media only screen and ($bp-md-min) {
+        padding-bottom: 0;
+      }
+
+      @media only screen and ($bp-lg-min) {
+        font-size: 24px;
+      }
+    }
+
+    // start spec numbers
+    .number {
+      font-size: 60px;
+      line-height: 2.25rem;
+
+      &.alternate {
+        color: $spec-pink;
+      }
+
+      .unit {
+        font-size: 40px;
+        padding-left: 5px;
+      }
+
+      @media only screen and ($bp-lg-min) {
+        font-size: 90px;
+        line-height: 3.25rem;
+
+        .unit {
+          font-size: 60px;
+        }
+      }
+
+      @media only screen and ($bp-md-min) {
+        &.three-up,
+        &.one-up,
+        &.two-up {
+          font-size: 90px;
+          line-height: 3.65rem;
+
+          .unit {
+            font-size: 60px;
+          }
+        }
+        &.two-up.large {
+          font-size: 120px;
+          line-height: 3.65rem;
+
+          .unit {
+            font-size: 90px;
+          }
+        }
+      }
+
+      @media only screen and ($bp-lg-min) {
+        &.three-up,
+        &.two-up,
+        &.one-up {
+          font-size: 130px;
+          line-height: 5.25rem;
+
+          .unit {
+            font-size: 90px;
+          }
+        }
+        &.two-up.large {
+          font-size: 150px;
+          line-height: 5.5rem;
+
+          .unit {
+            font-size: 100px;
+          }
+        }
+      }
+
+      @media only screen and ($bp-xxl-min) {
+        &.one-up {
+          font-size: 180px;
+          line-height: 7rem;
+        }
+        &.two-up.large {
+          font-size: 200px;
+          line-height: 5.5rem;
+        }
+      }
+    }
+
+    &-offset {
+      .spec-title {
+        @media only screen and ($bp-md-min) {
+          font-size: 18px;
+          line-height: 20px;
+        }
+
+        @media only screen and ($bp-xl-min) {
+          font-size: 24px;
+        }
+      } 
+      .number {
+        @media only screen and ($bp-md-min) {
+          font-size: 50px;
+          line-height: 28px;
+
+          .unit {
+            font-size: 30px;
+          }
+        }
+
+        @media only screen and ($bp-lg-min) {
+          font-size: 70px;
+          line-height: 42px;
+
+          .unit {
+            font-size: 30px;
+          }
+        }
+
+        @media only screen and ($bp-xl-min) {
+          font-size: 90px;
+          line-height: 3.25rem;
+  
+          .unit {
+            font-size: 60px;
+          }
+        }
+
+        @media only screen and ($bp-md-min) {
+          &.two-up {
+            font-size: 90px;
+            line-height: 3.65rem;
+  
+            .unit {
+              font-size: 60px;
+            }
+          }
+          &.three-up {
+            font-size: 70px;
+            line-height: 2.65rem;
+  
+            .unit {
+              font-size: 50px;
+            }
+          }
+        }
+
+        @media only screen and ($bp-lg-min) {
+          &.two-up {
+            font-size: 130px;
+            line-height: 4.85rem;
+  
+            .unit {
+              font-size: 90px;
+            }
+          }
+          &.three-up {
+            font-size: 90px;
+            line-height: 3.65rem;
+  
+            .unit {
+              font-size: 60px;
+            }
+          }
+        }
+  
+        @media only screen and ($bp-xl-min) {
+          &.two-up,
+          &.one-up {
+            font-size: 150px;
+            line-height: 5.85rem;
+  
+            .unit {
+              font-size: 120px;
+            }
+          }
+          &.three-up {
+            font-size: 100px;
+            line-height: 3.85rem;
+  
+            .unit {
+              font-size: 70px;
+            }
+          }
+        }
+      } 
+    }
+    // end spec numbers
+  }
+}
+

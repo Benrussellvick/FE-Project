@@ -1,0 +1,127 @@
+//
+// Header
+// --------------------------------------------------
+
+.site-header {
+	display: block;
+	padding: 15px 0 7px;
+  position: fixed;
+  will-change: transform;
+  width: 100%;
+  background-color: $white;
+  z-index: 4;
+  
+  @media only screen and ($bp-lg-min) {
+    padding: 20px 0 0;
+  }
+
+  @media only screen and ($bp-xxl-min) {
+    padding: 35px 0 15px;
+  }
+
+  &__search-btn {
+    background-color: transparent;
+    border: 0;
+    padding: 5px 5px 0 0;
+    
+    @media only screen and ($bp-lg-min) {
+      border-top: 5px solid transparent;
+      padding: 17px;
+      position: absolute;
+      top: 0;
+      right: -30px;
+      text-align: right;
+      z-index: 7;
+
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 1;
+        border-top: 5px solid $black;
+      }
+    }
+    
+    @media only screen and (min-width: 1150px) {
+      right: 0;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+      padding: 30px 0 0;
+    }
+
+  }
+
+  &__search-icon {
+    @include sprite(search-black);
+    
+    @media only screen and ($bp-xxl-min) {
+      @include sprite(Search_XXL);
+    }
+	}
+
+	&__logo-col {
+    text-align: center;
+    
+    @media only screen and ($bp-lg-min) {
+			text-align: left;
+		}
+  }
+  
+  &__logo-link {
+    display: inline-block;
+    padding: 2px 0;
+    @media only screen and ($bp-md-min) {
+      padding: 0;
+    }
+    img {
+      height: 20px;
+      @media only screen and ($bp-sm-min) {
+        height: initial;
+      }
+      @media only screen and ($bp-xxl-min) {
+        height: 35px;
+      }
+    }
+  }
+
+	&__mobile-menu-col {
+    text-align: right;
+    line-height: 26px;
+
+		@media only screen and ($bp-lg-min) {
+			display: none;
+		}
+	}
+
+	&__mobile-menu-btn {
+		background-color: transparent;
+		border: 0;
+    padding: 6px 0 0 5px;
+	}
+
+	&__mobile-menu-icon {
+    @include burger(20px, 1px, 5px, $black);
+    
+    &--active {
+      @include burger-to-cross;
+    }
+  }
+  
+  &__nav-col {
+    position: static;
+
+    @media only screen and ($bp-lg-min) {
+			position: relative;
+		}
+  }
+}
+
+// Classes activated by JS plugin
+.headroom {
+  transition: box-shadow .25s ease-in-out;
+}
+
+.headroom--unpinned,
+.headroom--not-top {
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+}

@@ -1,0 +1,101 @@
+// Templates
+// --------------------------------------------------
+
+.featured-page {
+
+    .container-single.container-padding {
+        .col-xs-12.col-lg-3.u-col-left {
+            display: none;
+        }
+        .col-xs-12.col-sm-8.col-lg-8.col-xl-8.col-sm-offset-2.col-md-offset-2.col-lg-offset-0.u-text-wrapper {
+            @media only screen and ($bp-lg-min) {
+                padding-left: 60px;
+            }
+
+            @media only screen and ($bp-md-min) {
+                margin-bottom: 30px;
+            }
+        
+            @media only screen and ($bp-xl-min) {
+                margin-bottom: 60px;
+            }
+        }
+    }
+    
+}
+
+.landing-page {
+
+    .c-listing__horizontal-border-tag {
+        @media only screen and ($bp-lg-min) {
+            padding: 60px 0;
+        }
+    }
+
+    &:first-of-type {
+        .c-split-panel {
+            
+            @media only screen and ($bp-lg-min) {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    [class*=theme] + .container-single .c-listing__horizontal-border {
+        border-top: 0;
+    }
+}
+
+.standard-content-page {
+    
+    .c-large-figures {
+        @media only screen and ($bp-lg-min) {
+            margin-left: -30px;
+        }
+    }
+
+    .c-large-figures.c-large-figures__two-up {
+        @media only screen and ($bp-lg-min) {
+            margin-left: -70px;
+        }
+        @media only screen and ($bp-xl-min) {
+            margin-left: -90px;
+        }
+    }
+
+}
+
+.article-page {
+
+    .c-split-panel {
+        @media only screen and ($bp-lg-min) {
+            margin-top: 60px;
+        }
+    }
+
+    .c-story-panel-2 {
+        margin-top: 30px;
+        @media only screen and ($bp-lg-min) {
+            margin-top: 60px;
+        }
+    }
+
+}
+
+.component-spacing {
+	margin-bottom: 15px;
+
+	.u-text-wrapper {
+		p:last-child {
+			margin-bottom: 0;
+		} 
+	}
+
+	@media only screen and ($bp-md-min) {
+		margin-bottom: 30px;
+	}
+
+	@media only screen and ($bp-xl-min) {
+		margin-bottom: 60px;
+	}
+}

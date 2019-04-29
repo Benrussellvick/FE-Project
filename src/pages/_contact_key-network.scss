@@ -1,0 +1,405 @@
+//
+// Contact page
+// --------------------------------------------------
+
+.contact-tabs {
+	padding-top: 15px;
+
+	@media screen and ($bp-md-min) {
+		padding-top: 30px;
+	}
+
+	@media screen and ($bp-lg-min) {
+		padding-top: 60px;
+		min-height: 800px;
+	}
+
+	@media screen and ($bp-xxl-min) {
+		padding-top: 90px;
+	}
+
+	.js-tabcontent {
+		width: 100%;
+		
+		@media screen and ($bp-lg-min) {
+			padding-top: 50px;
+		}
+
+		@media screen and ($bp-xxl-min) {
+			padding-top: 60px;
+		}
+	}
+
+	.c-padding {
+		@media screen and ($bp-lg-min) {
+			padding: 0 60px;
+		}
+	
+		@media screen and ($bp-xxl-min) {
+			padding: 0 90px;
+		}
+	}
+
+	.row {
+		.c-large-offices__wrap {
+		
+			@media screen and ($bp-lg-min) {
+				padding: 0 60px;
+
+				&:nth-of-type(3n+1),
+				&:nth-of-type(3n) {
+					padding: 0 60px;
+				}
+			}
+
+			@media screen and ($bp-xxl-min) {
+				padding: 0 90px;
+
+				&:nth-of-type(3n+1),
+				&:nth-of-type(3n) {
+					padding: 0 90px;
+				}
+			}
+		}
+	}
+
+	.c-search-results {
+		padding-top: 0;
+		padding-left: 0;
+		background-color: $white;
+
+		@media screen and ($bp-md-min) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		@media screen and ($bp-xl-min) {
+			.col-xl-6 {
+				width: calc(50% + 30px);
+			}
+
+			.col-xl-offset-3 {
+				margin-left: calc(25% - 30px);
+			}
+		}
+
+		.c-search__search-bar {
+
+			input {
+				color: $black;
+				background-color: $white;
+				border-bottom: 1px solid $keyline;
+			}
+
+			.link-internal {
+				color: $black;
+			}
+
+			:-moz-placeholder {
+				color: $black;
+			}
+			
+			::-webkit-input-placeholder {
+				color: $black;
+			}
+			
+			:-ms-input-placeholder {
+				color: $black;
+			}
+		}
+	}
+
+	.c-search {
+		display: block;
+		position: static;
+		min-height: 0;
+		background-color: $white;
+
+		@media screen and ($bp-md-min) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		@media screen and ($bp-xl-min) {
+			.col-xl-6 {
+				width: calc(50% + 30px);
+			}
+
+			.col-xl-offset-3 {
+				margin-left: calc(25% - 30px);
+			}
+		}
+
+		&__suggestion--full-width {
+			.search-content {
+				h5, p, .link-internal, .link-external {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+.contact-key-networks {
+
+	h1 {
+		font-size: 36px;
+		line-height: 45px;
+
+		@media screen and ($bp-lg-min) {
+			font-size: 50px;
+			line-height: 60px;
+		}
+	}
+
+	.js-accordion__header {
+		font-family: $body-font-semibold;
+		text-transform: initial;
+		font-size: 22px;
+		padding: 21px 25px 21px 0;
+
+		&:after {
+			top: 23px;
+			right: 10px;
+		}
+
+		@media screen and ($bp-md-min) {
+			font-size: 24px;
+			padding: 26px 25px 26px 0;
+
+			&:after {
+				right: 15px;
+				top: 28px;
+			}
+		}
+
+		@media screen and ($bp-lg-min) {
+			padding: 26px 25px 26px 0;
+			font-size: 26px;
+
+			&:after {
+				top: 28px;
+			}
+		}
+
+		@media screen and ($bp-xl-min) {
+			font-size: 30px;
+			padding: 30px 25px 30px 0;
+
+			&:after {
+				top: 33px;
+			}
+		}
+
+		@media screen and ($bp-xxl-min) {
+			font-size: 35px;
+			padding: 34px 25px 34px 0;
+
+			&:after {
+				top: 37px;
+			}
+		}
+	}
+
+	h3 {
+		font-size: 22px;
+		line-height: 26px;
+		max-width: 510px;
+
+		@media screen and ($bp-md-min) {
+			font-size: 30px;
+			line-height: 36px;
+		}
+
+		@media screen and ($bp-lg-min) {
+			font-size: 32px;
+			line-height: 40px;
+			max-width: 640px;
+		}
+
+		@media screen and ($bp-xxl-min) {
+			font-size: 35px;
+			line-height: 42px;
+		}
+	}
+
+	&__panel {
+
+		.row {
+			@media screen and ($bp-md-min) {
+				margin: 0 -30px;
+				display: flex;
+				align-content: space-between;
+				flex-wrap: wrap;
+				align-items: stretch;
+			}
+
+			@media screen and ($bp-lg-min) {
+				margin: 0 -60px;
+			}
+		}
+
+		.content {
+			font-size: 20px;
+			line-height: 26px;
+			max-width: 510px;
+
+			@media screen and ($bp-lg-min) {
+				max-width: none;
+			}
+		}
+
+		.intro {
+			font-size: 22px;
+			line-height: 22px;
+			color: $black;
+			max-width: 510px;
+
+			@media screen and ($bp-md-min) {
+				font-size: 30px;
+				line-height: 36px;
+				margin-bottom: 40px;
+			}
+
+			@media screen and ($bp-lg-min) {
+				font-size: 32px;
+				line-height: 40px;
+				max-width: 640px;
+			}
+		}
+
+		img {
+			border-radius: 50px;
+			margin-bottom: 30px;
+			max-height: 150px;
+			width: 150px;
+		}
+
+		&__module {
+			padding-bottom: 40px;
+
+			@media screen and ($bp-md-min) {
+				padding-right: 30px;
+				padding-left: 30px;
+				min-height: 365px;
+				padding-bottom: 90px;
+
+				.link-internal {
+					position: absolute;
+					bottom: 65px;
+					left: 30px;
+				}
+			}
+
+			@media screen and ($bp-lg-min) {
+				padding-right: 60px;
+				padding-left: 60px;
+
+				// &:nth-child(3) {
+				// 	padding-right: 30px;
+				// }
+
+				.link-internal {
+					left: 60px;
+				}
+			}
+		}
+	}
+}
+
+.c-company-overlay {
+
+	background-color: $white;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+	z-index: 5;
+	padding-top: 15px;
+	display: none;
+
+	&__inner {
+		max-width: 1400px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	&--visible {     
+        display: block;
+    }
+
+	@media screen and ($bp-md-min) {
+		padding-top: 30px;
+	}
+
+	@media screen and ($bp-lg-min) {
+		padding-top: 60px;
+	}
+
+	@media screen and ($bp-xxl-min) {
+		padding-top: 90px;
+	}
+
+	
+
+	&__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		color: white;
+		font-family: sans-serif;
+		cursor: pointer;
+		@include sprite(cross-black);
+		text-indent: -9999px;
+		z-index: 10;
+
+		@media screen and ($bp-md-min) {
+			right: 30px;
+			top: 30px;
+		}
+
+		@media screen and ($bp-lg-min) {
+			right: 60px;
+			top: 0;
+		}
+
+		@media screen and ($bp-xxl-min) {
+			right: 90px;
+		}
+	}
+
+	&__img {
+		img {
+			width: 80px;
+			height: 80px;
+			margin-bottom: 10px;
+			@media screen and ($bp-md-min) {
+				width: 120px;
+				height: 120px;
+			}			
+			@media screen and ($bp-lg-min) {
+				margin: 0 auto 10px auto;
+				width: 200px;
+				height: 200px;
+			}
+			@media screen and ($bp-xl-min) {
+				width: 250px;
+				height: 250px;
+			}
+		}
+		p {
+			@media screen and ($bp-lg-min) {
+				text-align: center;
+			}			
+		}
+	}
+}
+
+.overlay-open {
+	overflow: hidden;
+	body {
+		overflow: hidden;
+	}
+}

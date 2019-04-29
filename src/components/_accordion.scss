@@ -1,0 +1,188 @@
+//
+// Accordion
+// --------------------------------------------------
+
+.js-accordion {
+	margin: 30px 0;
+	@media only screen and ($bp-xxl-min) {
+		margin: 60px 0;
+	}
+}
+
+.js-accordion__panel {
+	//max-height: 0;
+	//visibility: hidden;
+	//overflow: hidden;
+	//@include transition(transition, all .4s ease-in-out, max-height .6s ease-out);
+}
+
+.standard-accordion {
+	.js-accordion__panel {
+		max-height: 0;
+		visibility: hidden;
+		overflow: hidden;
+		@include transition(transition, all .4s ease-in-out, max-height .6s ease-out);
+	}
+}
+
+.standard-accordion__header[aria-expanded="true"] + .standard-accordion__panel {
+	padding: 30px 0;
+	overflow: hidden;
+    opacity: 1;
+    max-height: 1000em;
+	visibility: visible;
+	border-bottom: 1px solid $keyline;
+}
+
+.standard-accordion__panel[aria-hidden=true] {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    margin: 0;
+}
+
+.js-accordion__header {
+	font-family: $base-font-bold;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: 0;
+	margin: 0;
+	border-bottom: 1px solid $keyline;
+	color: $text-color;
+    position: relative;
+  	display: block;
+  	background: none;
+	outline: 0;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+    padding: 15px 25px 15px 0;
+	width: 100%;
+	position: relative;
+
+	&:after {
+		@include transition(transition, transform .25s ease-in);
+		top: 17px;
+		@include sprite(plus-black);
+		content: "";
+		position: absolute;
+		right: 15px;
+		// top: 8px;
+	}
+	&[aria-expanded="true"] {
+		border-bottom: none;
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+    &:hover, &:focus, &:active {
+    	cursor: pointer;
+    	background: none;
+		text-decoration: underline;
+		outline: none;
+    }
+	&:focus, &:active {
+		box-shadow: none;
+		outline: none;
+	}
+	&:nth-child(2) {
+		border-top: 1px solid $keyline;
+	}
+}
+
+.accordion__all {
+	float: right;
+	margin-bottom: 10px;
+	text-decoration: none;
+	//display: none;
+	border: 0;
+	border-radius: 0;
+	color: $text-color;
+    position: relative;
+  	background: none;
+	outline: 0;
+	&:link, &:visited {
+		text-decoration: none;
+	}
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
+	// display: none;
+    &.accordion__all--open {
+    	.accordion__all__icon {
+        	transform: rotate(45deg);
+	    }
+	}
+	.accordion__all__text,
+	.accordion__all__open,
+	.accordion__all__close {
+		font-family: $base-font-light;
+		font-size: 14px;
+		letter-spacing: 0.5px;
+		line-height: 14px;
+
+		&.hide {
+			display: none;
+		}
+	}
+
+	&.show {
+		display: block;
+	}
+}
+
+
+
+//SPECIAL STYLES FOR FOOTER ACCORDION
+footer {
+	.accordion__all {
+		display: none;
+	}
+	.accordion__panel {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.accordion__header {
+		border: 0;
+		color: $text-color;
+//		font-family: $medfont;
+		padding: 5px 0;
+		margin-bottom: 15px;
+		span {
+			top: 0;
+		    &:before, &:after {
+		        height: 21px;
+		        transform: rotate(0deg);
+				transition: all 0.5s;
+		    }
+		    &:after {
+		        content: "";
+		        transform: rotate(90deg);
+		    }
+		}
+	    &:hover {
+	    	cursor: pointer;
+	    }
+	    &[aria-expanded="true"] {
+	    	span {
+	        	transform: rotate(45deg);
+		    }
+		}
+	}
+	.accordion__title {
+	   // @media only screen and (min-width: $screen-md) {
+			clip: inherit;
+			height: auto;
+			width: auto;
+			margin: 0;
+			position: inherit;
+	//	}
+	}
+}
+
+// p + .js-accordion {
+// 	padding-top: 15px;
+// 	@media only screen and ($bp-lg-min) {
+// 		padding-top: 30px;
+// 	}
+// }

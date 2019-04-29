@@ -1,0 +1,234 @@
+// Theming
+// --------------------------------------------------
+
+.c-header-investor {
+
+    &__wrap {
+        background-color: $default-grey;
+
+        &:first-child {
+            background-color: $black;
+        }
+
+        h4, h5, li, p {
+            color: $white;
+        }
+
+        h1 {
+            color: $white;
+        }
+
+        a {
+            color: $white;
+      
+            &:hover,
+            &:focus,
+            &:active {
+                color: $white;
+            }
+        }
+    } // end theme
+
+    //theme A - strong green sand
+    &.theme-a {
+        .c-header-investor__wrap {
+            background-color: $green-kaitoke;
+
+            &:first-child {
+                background-color: $green-zuccini;
+            }
+
+            h4, h5, li, p {
+                color: $white;
+            }
+
+            h1 {
+                color: $yellow-sunflower;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme B - blue green lemon
+    &.theme-b {
+        .c-header-investor__wrap {
+            background-color: $green-mosque;
+
+            &:first-child {
+                background-color: $green-deep-teal;
+            }
+
+            h4, h5, li, p {
+                color: $white;
+            }
+
+            h1 {
+                color: $yellow-schoolbus;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme C - dark blue sand
+    &.theme-c {
+        .c-header-investor__wrap {
+            background-color: $blue-sapphire;
+
+            &:first-child {
+                background-color: $green-dark;
+            }
+
+            h4, h5, li, p {
+                color: $white;
+            }
+
+            h1 {
+                color: $yellow-mustard;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme D - blue orange
+    &.theme-d {
+        .c-header-investor__wrap {
+            background-color: $blue-tarawera;
+
+            &:first-child {
+                background-color: $blue-gem;
+            }
+
+            h4, h5, li, p {
+                color: $white;
+            }
+
+            h1 {
+                color: $orange-clementine;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme E - navy orange
+    &.theme-e {
+        .c-header-investor__wrap {
+            background-color: $blue-midnight;
+
+            &:first-child {
+                background-color: $blue-navy;
+            }
+
+            h4, h5, li, p {
+                color: $white;
+            }
+
+            h1 {
+                color: $pink-rose-bud;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme F - red violet light orange
+    &.theme-f {
+        .c-header-investor__wrap {
+            background-color: $purple-palatinate;
+
+            &:first-child {
+                background-color: $purple-blackberry;
+            }
+
+            h4, h5, li, p {
+                color: $white;
+            }
+
+            h1 {
+                color: $yellow-selective;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+    } // end theme
+
+    //theme G - dark red light orange
+    &.theme-g {
+        .c-header-investor__wrap {
+            background-color: $purple-red;
+
+            &:first-child {
+                background-color: $purple-tyrian;
+            }
+
+            h4, h5, li, p {
+                color: $white;
+            }
+
+            h1 {
+                color: $yellow-selective;
+            }
+
+            a {
+                color: $white;
+        
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $white;
+                }
+            }
+        }
+    } // end theme
+}

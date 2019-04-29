@@ -1,0 +1,39 @@
+//
+// Navigation - access keys
+// --------------------------------------------------
+
+.accessible-nav {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	a:link, a:visited {
+		height: 0;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 5px;
+		width: 0;
+		z-index: 1002;
+	}
+	a:active, a:focus { /* Only show skiplinks on focus */
+		color: $text-color;
+		background: white;
+		border:1px solid $text-color;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		padding: 1em;
+		position: absolute;
+		text-decoration:underline;
+		width: auto;
+		z-index: 10000;
+	}
+}

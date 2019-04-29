@@ -1,0 +1,50 @@
+//
+// Navigation - footer
+// --------------------------------------------------
+
+.footer-nav {
+
+  &.u-slide-down {
+    margin-bottom: 5px;
+  }
+  
+  @media only screen and ($bp-lg-min) {
+    max-height: none;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+
+  &__list {
+    margin-bottom: 0;
+  }
+
+  &__list-item {
+    margin-left: 0;
+
+    @media only screen and ($bp-xxl-min) {
+      margin-bottom: 15px;
+    }
+
+    &:before {
+      content: "";
+    }
+  }
+
+  &__link {
+    @media only screen and ($bp-md-max) {
+      padding-left: 0;
+    }
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+}

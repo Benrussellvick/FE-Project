@@ -1,0 +1,253 @@
+//
+// Search page
+// --------------------------------------------------
+
+
+.c-search {
+	background-color: $search-blue;
+	min-height: 400px;
+	color: white;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 4;
+	// overflow: auto;
+	display: none;
+
+	input:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0 30px #062b50 inset;
+		-webkit-text-fill-color: $white !important;
+	}
+
+	&.c-main-search {
+		overflow: auto;
+	}
+	
+	@media screen and ($bp-md-min) {
+		padding: 0 60px 60px;
+	}
+
+	@media screen and ($bp-lg-min) {
+		padding: 0 90px 60px;
+	}
+
+	@media screen and ($bp-xl-min) {
+		padding: 0 0 60px;
+	}
+
+	.link-internal {
+		    color: white;
+		}
+	.c-search__close {
+		position:absolute;
+		top: 15px;
+		right: 0;
+		color: white;
+		font-family: sans-serif;
+		cursor: pointer;
+		@include sprite(cross-white);
+		text-indent: -9999px;
+
+		@media screen and ($bp-md-min) {
+			top: 30px;
+			right: -30px;
+		}
+
+		@media screen and ($bp-lg-min) {
+			top: 60px;
+		}
+
+		@media screen and ($bp-xl-min) {
+			top: 90px;
+			right: -160px;
+		}
+	}
+	.c-search__search-bar {
+		margin-top: 60px;
+		text-align: center;
+		width: 100%;
+		position: relative;
+
+		@media screen and ($bp-md-min) {
+			margin-top: 105px;
+		}
+
+		@media screen and ($bp-lg-min) {
+			margin-top: 125px;
+		}
+
+		@media screen and ($bp-xl-min) {
+			margin-top: 160px;
+		}
+
+		@media screen and ($bp-xxl-min) {
+			margin-top: 180px; 
+		}
+
+		input {
+			background-color: $search-blue;
+			color: white;
+			font-size: 22px;
+			font-weight: 600;
+		    font-family: serif;
+		    padding: 0 55px 10px 10px;
+			width: 100%;
+			border-bottom: 1px solid $keyline;
+
+			@media screen and ($bp-md-min) {
+				font-size: 30px;
+			}
+
+			@media screen and ($bp-lg-min) {
+				font-size: 35px;
+			}
+
+			@media screen and ($bp-xl-min) {
+				font-size: 40px;
+			}
+
+			@media screen and ($bp-xxl-min) {
+				font-size: 45px;
+			}
+
+			&::placeholder {
+				opacity: 1;
+			}
+		}
+		.link-internal {
+		    float: right;
+			margin-top: 10px;
+			
+		    @media screen and ($bp-sm-min) {
+		    	position: absolute;
+		    	top: -3px;
+		    	right:0;
+			}
+			@media screen and ($bp-md-min) {
+				top: 10%;
+				right: 15px;
+			}
+		}
+	}
+	.c-search__suggestion {
+		color: white;
+		
+		.c-search__suggestion--columns {
+			border-bottom: solid 1px $keyline;
+			margin-top: 40px;
+
+			@media screen and ($bp-md-min) {
+				padding-bottom: 10px;
+			}
+
+			@media screen and ($bp-lg-min) {
+				margin-top: 50px;
+			}
+
+			@media screen and ($bp-xl-min) {
+				margin-top: 50px;
+				// padding-bottom: 90px;
+			}
+
+			@media screen and ($bp-xxl-min) {
+				margin-top: 60px;
+			}
+
+			.tag {
+				color: $orange-clementine;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+
+			ul li {
+				color: white;
+				line-height: 0;
+				margin-left: 0;
+				margin-bottom: 10px;
+				padding-right: 40px;
+
+				@media screen and ($bp-lg-min) {
+					margin-bottom: 15px;
+					max-width: 260px;
+					padding-right: 0;
+				}
+
+				&:before {
+					content:none;
+				}
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+	.c-search__suggestion-group {
+
+		// .row {
+		// 	&:last-child {
+		// 		.c-search__suggestion--full-width {
+		// 			border-bottom: none;
+		// 		}
+		// 	}
+		// }
+
+		.c-search__suggestion--full-width {
+			border-bottom: solid 1px $keyline;
+			padding: 40px 0 30px;
+
+			display: flex;
+			align-items: stretch;
+
+			@media screen and ($bp-xxl-min) {
+				padding: 60px 0 50px;
+			}
+			h5 {
+				color: $white;
+				font-size: 28px;
+				line-height: 31px;
+				margin-bottom: 10px;
+
+				&.tag {
+					font-size: 14px;
+					line-height: 17px;
+				}
+			}
+			small {
+				font-size: 20px;
+				line-height: 26px;
+			}
+			&.c-search__suggestion--full-width-first {
+				padding: 50px 0 60px;
+
+				@media screen and ($bp-md-min) {
+					padding: 55px 0 60px;
+				}
+				@media screen and ($bp-xxl-min) {
+					padding: 65px 0 60px;
+				}
+			}
+			.search-content {
+				@media screen and ($bp-md-min) {
+					padding-left: 20px;
+				}
+				@media screen and ($bp-xl-min) {
+					padding-left: 0;
+				}
+			}
+			img {
+				border-radius: 75px;
+				max-width: 150px;
+				position: absolute;
+				margin-top: -75px; /* Half the height */
+				top: 50%;
+   				left: 0;
+			}
+			.link-internal {
+				margin-right: 20px;
+			}	
+		}
+	}
+}

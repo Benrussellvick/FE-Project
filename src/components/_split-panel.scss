@@ -1,0 +1,378 @@
+//
+// Split panel
+// --------------------------------------------------
+
+.c-split-panel {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px; 
+
+    h3 {
+        // color: $bright-blue;
+    }
+
+    @media only screen and ($bp-md-min) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            &:before,
+            &:after {
+                content: none;
+            }
+        }
+    }
+
+    @media only screen and ($bp-lg-min) {
+        margin-bottom: 60px;
+    }
+
+    @media only screen and ($bp-lg-min) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media only screen and ($bp-xxl-min) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    &__text {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @media only screen and ($bp-md-min) {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            height: 100%;
+            align-self: center;
+            margin-top: 0;
+            h3 {
+                font-size: 24px;
+                margin-bottom: 10px;
+                line-height: 28px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        @media only screen and ($bp-lg-min) {
+            h3 {
+                font-size: 35px;
+                margin-bottom: 15px;
+                line-height: 42px;
+                max-width: 500px;
+            }
+            p {
+                max-width: 500px;
+            }
+        }
+        @media only screen and ($bp-xl-min) {
+            h3 {
+                max-width: 700px;
+                font-size: 40px;
+            }
+            p {
+                max-width: 700px;
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+        @media only screen and ($bp-xxl-min) {
+            margin-bottom: 0;
+            h3 {
+                max-width: 700px;
+            }
+            p {
+                max-width: 700px;
+            }
+        }
+    }
+
+    &__quote {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        blockquote {
+            margin-right: 20px;
+
+            @media only screen and ($bp-xl-min) {
+                margin-left: 0;
+            }
+        }
+        @media only screen and ($bp-md-min) {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            height: 100%;
+            align-self: center;
+
+            blockquote {
+                margin-right: 0;
+                margin-left: 0;
+
+                p {
+                //    font-size: 18px;
+
+                    &.caption {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        @media only screen and ($bp-lg-min) {
+            blockquote {
+                max-width: 500px;
+
+                p {
+                //    line-height: 26px;
+                }
+            }
+        }
+        @media only screen and ($bp-xl-min) {
+            blockquote {
+                max-width: 700px;
+
+                p {
+                //    font-size: 30px;
+                //    line-height: 36px;
+                }
+            }    
+        }
+        @media only screen and ($bp-xxl-min) {
+            blockquote {
+                max-width: 700px;
+            }    
+        }
+    }
+
+    &__figures-wrap {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @media only screen and ($bp-md-min) {
+            margin-top: 0; 
+            margin-bottom: 25px;
+            height: 100%;
+            align-self: center;
+        }
+        @media only screen and ($bp-lg-min) {
+            .caption {
+                max-width: 400px;
+            }
+        }
+        .number {
+            font-size: 70px;
+            // color: $bright-blue;
+            line-height: initial;
+
+            @media only screen and ($bp-lg-min) {
+                font-size: 100px;
+            }
+        }
+        .caption:last-child {
+            margin-bottom: 0;
+        }
+        @media only screen and ($bp-xxl-min) {
+           margin-bottom: 0;
+
+            .number,
+            .caption {
+                width: 350px;
+                margin: auto;
+                display: block;
+            }
+        }
+    }
+
+    &.full-width {
+        padding: 0;
+
+        .c-split-panel__text, .c-split-panel__figures-wrap, .c-split-panel__quote {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            padding: 0 15px;
+
+            @media only screen and ($bp-md-min) {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+        }
+        @media only screen and ($bp-md-min) {
+            .row {
+                display: flex;
+                width: 100%;
+
+                .c-split-panel__text:first-child {
+                    padding: 0 30px 0 30px;
+                }
+                .c-split-panel__figures-wrap:first-child {
+                    padding: 0 30px 0 30px;
+                }
+                .c-split-panel__quote {
+                    padding: 0 30px 0 30px;
+                }
+
+                &__reverse {
+                    flex-direction: row-reverse;
+                }
+            }
+            .c-split-panel__text,
+            .c-split-panel__figures-wrap,
+            .c-split-panel__quote,
+            .c-split-panel__img {
+                margin-top: 0;
+                margin-bottom: 0;
+                vertical-align: middle;
+                height: 100%;
+                align-self: center;
+            }
+            .c-split-panel__img {
+                &-right {
+                    float: right;
+                }
+            } 
+            .c-split-panel__text {
+                &-left {
+                    float: left;
+                }
+            }
+            .c-split-panel__figures-wrap {
+                &-left {
+                    float: left;
+                }
+            }
+            .c-split-panel__quote {
+                &-left {
+                    float: left;
+                }
+            }
+        }
+        @media only screen and ($bp-lg-min) {
+            .row {
+                .c-split-panel__text,
+                .c-split-panel__text:first-child,
+                .c-split-panel__figures-wrap,
+                .c-split-panel__figures-wrap:first-child,
+                .c-split-panel__quote,
+                .c-split-panel__quote:first-child {
+                    padding: 0 60px 0 60px;
+                }
+            }   
+        }
+        @media only screen and ($bp-xxl-min) {
+            .row {
+                .c-split-panel__text,
+                .c-split-panel__text:first-child,
+                .c-split-panel__figures-wrap,
+                .c-split-panel__figures-wrap:first-child,
+                .c-split-panel__quote,
+                .c-split-panel__quote:first-child {
+                    padding: 0 90px 0 90px;
+                }
+            }   
+        }
+        .c-split-panel__img + .c-split-panel__text, .c-split-panel__figures-wrap, .c-split-panel__quote {
+            margin-top: 20px;
+
+            @media only screen and ($bp-md-min) {
+                margin-top: 0;
+            }
+        }
+    } 
+
+    @media only screen and ($bp-md-min) {
+        .c-split-panel__text:first-child {
+            padding: 0 30px 0 0;
+        }
+        .c-split-panel__quote {
+            padding: 0 30px 0 0;
+        }
+        .c-split-panel__figures-wrap:first-child {
+            padding: 0 30px 0 0;
+        }
+        .c-split-panel__text + .c-split-panel__quote {
+            padding: 0 0 0 30px;
+        }
+        .c-split-panel__quote + .c-split-panel__text {
+            padding: 0 0 0 30px;
+        }
+        .c-split-panel__figures-wrap + .c-split-panel__quote {
+            padding: 0 0 0 30px;
+        }
+        .c-split-panel__figures-wrap + .c-split-panel__text {
+            padding: 0 0 0 30px;
+        }
+        .c-split-panel__img + .c-split-panel__text {
+            padding: 0 30px 0 30px;
+        }
+    }
+
+    @media only screen and ($bp-lg-min) {
+        .c-split-panel__text:first-child {
+            padding: 0 60px 0 0;
+        }
+        .c-split-panel__quote:first-child {
+            padding: 0 60px 0 0;
+        }
+        .c-split-panel__quote {
+            padding: 0 60px 0 0;
+        }
+        .c-split-panel__text + .c-split-panel__quote {
+            padding: 0 0 0 60px;
+        }
+        .c-split-panel__quote + .c-split-panel__text {
+            padding: 0 0 0 60px;
+        }
+        .c-split-panel__figures-wrap:first-child {
+            padding: 0 60px 0 0;
+        }
+        .c-split-panel__figures-wrap + .c-split-panel__quote {
+            padding: 0 0 0 60px;
+        }
+        .c-split-panel__figures-wrap + .c-split-panel__text {
+            padding: 0 0 0 60px;
+        }
+        .c-split-panel__img + .c-split-panel__text {
+            padding: 0 60px 0 60px;
+        }
+    }
+
+    @media only screen and ($bp-xxl-min) {
+        .c-split-panel__text:first-child {
+            padding: 0 90px 0 0;
+        }
+        .c-split-panel__quote:first-child {
+            padding: 0 90px 0 0;
+        }
+        .c-split-panel__quote {
+            padding: 0 90px 0 0;
+        }
+        .c-split-panel__text + .c-split-panel__quote {
+            padding: 0 0 0 90px;
+        }
+        .c-split-panel__quote + .c-split-panel__text {
+            padding: 0 0 0 90px;
+        }
+        .c-split-panel__figures-wrap:first-child {
+            padding: 0 0 0 90px;
+        }
+        .c-split-panel__figures-wrap + .c-split-panel__quote {
+            padding: 0 0 0 90px;
+        }
+        .c-split-panel__figures-wrap + .c-split-panel__text {
+            padding: 0 0 0 90px;
+        }
+        .c-split-panel__img + .c-split-panel__text {
+            padding: 0 90px 0 90px;
+        }
+    }
+}
+

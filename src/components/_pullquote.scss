@@ -1,0 +1,143 @@
+//
+// Pullquote
+// --------------------------------------------------
+
+.c-pullquote {
+  blockquote {
+    margin: 0;
+    margin-left: 20px;
+    position: relative;
+    font-family: $body-font-semibold;
+    padding: 0;
+
+    p {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      @media only screen and ($bp-xxl-min) {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* 
+    font-size: 18px;
+    line-height: 24px;
+    */
+    font-size: 20px;
+      line-height: 26px;
+    @media only screen and ($bp-md-min) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    @media only screen and ($bp-lg-min) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @media only screen and ($bp-xl-min) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    /* 
+    @media only screen and ($bp-xxl-min) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    */
+
+    span.open-quote {
+      position: relative;
+
+      // Theme color
+      // color: $bright-blue;
+      &:before {
+        content: '\201C';
+        font-family: $body-font-semibold;
+        background-color: transparent;
+        position: absolute;
+        left: -36px;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        display: block;
+        z-index: 1;
+        height: 46px;
+        padding: 0 16px;
+
+        font-size: 40px;
+        line-height: 30px;
+        @media only screen and ($bp-md-min) {
+          top: -7px;
+          font-size: 40px;
+          line-height: 50px;
+          left: -27px;
+          padding: 0 8px;
+        }
+        @media only screen and ($bp-xl-min) {
+          font-size: 70px;
+          top: 2px;
+          left: -37px;
+        }
+        @media only screen and ($bp-xxl-min) {
+          font-size: 80px;
+          line-height: 70px;
+          top: -5px;
+          left: -42px;
+        }
+      }
+    }
+    &:after, &:before {
+      display: none
+    }
+    span.close-quote {
+      position: relative;
+
+      // Theme color
+      // color: $bright-blue;
+      &:after {
+        content: '\201D';
+        font-family: $body-font-semibold;
+        position: absolute;
+        left: 0;
+        // top:0;
+        bottom: 0;
+        margin: auto;
+        display: inline-block;
+        z-index: 1;
+        padding: 0 10px;
+
+        font-size: 40px;
+        line-height: 0;
+        @media only screen and ($bp-md-min) {
+          font-size: 40px;
+          left: -6px;
+        }
+        @media only screen and ($bp-xl-min) {
+          font-size: 70px;
+          left: -5px;
+        }
+        @media only screen and ($bp-xxl-min) {
+          font-size: 80px;
+        }
+      }
+    }
+    .author {
+      p {
+        margin: 0;
+      }
+      // small {
+      //   font-family: $base-font-light;
+      //   font-size: 14px;
+      //   line-height: 25px;
+      // }
+    }
+  }
+}
+
+p + .c-pullquote {
+	padding: 15px;
+	@media only screen and ($bp-lg-min) {
+		padding: 30px 0;
+  }
+  @media only screen and ($bp-xxl-min) {
+		padding: 60px 0;
+	}
+}

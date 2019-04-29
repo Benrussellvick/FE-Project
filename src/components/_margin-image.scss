@@ -1,0 +1,47 @@
+//
+// Margin image
+// --------------------------------------------------
+.c-margin-image {
+
+  min-height: 150px;
+
+  &__image {
+    img {
+      margin-bottom: 10px;
+      @media only screen and ($bp-md-min) {
+        margin-bottom: 15px;
+      }
+      @media only screen and ($bp-xl-min) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media only screen and ($bp-md-min) {
+    &__image {
+      .caption {
+        padding-right: 15px;
+      }
+    }
+  }
+  @media only screen and ($bp-lg-min) {
+    position: relative;
+    &__image {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      .caption {
+        padding-right: 30px;
+      }
+    }
+  }
+  @media only screen and ($bp-xl-min) {
+    &__image {
+      .caption {
+        padding-right: 60px;
+      }
+    }
+  }
+  
+}

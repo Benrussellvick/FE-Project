@@ -1,0 +1,171 @@
+// Theming
+// --------------------------------------------------
+
+.c-header-media {
+
+    &__wrap {
+        background-color: $default-grey;
+
+        &:first-child {
+            background-color: $black;
+        }
+
+        &-text{
+            h4 {
+                color: $default-lt-grey;
+            }
+
+            @media only screen and ($bp-md-min) {
+                background-color: $black;
+            }
+        }
+    } // end theme
+
+    //theme A - strong green sand
+    &.theme-a {
+        .c-header-media__wrap {
+            background-color: $green-kaitoke;
+
+            &:first-child {
+                background-color: $green-zuccini;
+            }
+    
+            &-text{
+                h4 {
+                    color: $yellow-sunflower;
+                }
+    
+                @media only screen and ($bp-md-min) {
+                    background-color: $green-zuccini;
+                }
+            }
+        }
+    } // end theme
+
+    //theme B - blue green lemon
+    &.theme-b {
+        .c-header-media__wrap {
+            background-color: $green-mosque;
+
+            &:first-child {
+                background-color: $green-deep-teal;
+            }
+    
+            &-text{
+                h4 {
+                    color: $yellow-schoolbus;
+                }
+    
+                @media only screen and ($bp-md-min) {
+                    background-color: $green-deep-teal;
+                }
+            }
+        }
+    } // end theme
+
+    //theme C - dark blue sand
+    &.theme-c {
+        .c-header-media__wrap {
+            background-color: $blue-sapphire;
+
+            &:first-child {
+                background-color: $green-dark;
+            }
+    
+            &-text{
+                h4 {
+                    color: $yellow-mustard;
+                }
+    
+                @media only screen and ($bp-md-min) {
+                    background-color: $green-dark;
+                }
+            }
+        }
+    } // end theme
+
+    //theme D - blue orange
+    &.theme-d {
+        .c-header-media__wrap {
+            background-color: $blue-tarawera;
+
+            &:first-child {
+                background-color: $blue-gem;
+            }
+    
+            &-text{
+                h4 {
+                    color: $orange-clementine;
+                }
+    
+                @media only screen and ($bp-md-min) {
+                    background-color: $blue-gem;
+                }
+            }
+        }
+    } // end theme
+
+    //theme E - navy orange
+    &.theme-e {
+        .c-header-media__wrap {
+            background-color: $blue-midnight;
+
+            &:first-child {
+                background-color: $blue-navy;
+            }
+    
+            &-text{
+                h4 {
+                    color: $pink-rose-bud;
+                }
+    
+                @media only screen and ($bp-md-min) {
+                    background-color: $blue-navy;
+                }
+            }
+        }
+    } // end theme
+
+    //theme F - red violet light orange
+    &.theme-f {
+        .c-header-media__wrap {
+            background-color: $purple-palatinate;
+
+            &:first-child {
+                background-color: $purple-blackberry;
+            }
+    
+            &-text{
+                h4 {
+                    color: $yellow-selective;
+                }
+    
+                @media only screen and ($bp-md-min) {
+                    background-color: $purple-blackberry;
+                }
+            }
+        }
+    } // end theme
+
+    //theme G - dark red light orange
+    &.theme-g {
+        .c-header-media__wrap {
+            background-color: $purple-red;
+
+            &:first-child {
+                background-color: $purple-tyrian;
+            }
+    
+            &-text{
+                h4 {
+                    color: $yellow-selective;
+                }
+    
+                @media only screen and ($bp-md-min) {
+                    background-color: $purple-tyrian;
+                }
+            }
+        }
+    } // end theme
+
+}

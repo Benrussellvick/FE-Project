@@ -1,0 +1,125 @@
+// ==============================================
+// MAIN.SCSS
+// ==============================================
+
+// utils ----------------------------------------
+@import 
+	'utils/variables',
+	'utils/sprite-map',
+	'utils/mixins',
+	'utils/normalize',
+	'utils/responsive-visibility',
+	'utils/responsive-utilities';
+
+// vendors --------------------------------------
+@import
+	'vendors/slick',
+	'vendors/sass-burger',
+	'vendors/plyr/plyr';
+
+// base -----------------------------------------
+@import 
+	'base/web-fonts',
+	'base/margins',
+	'base/utilities',
+	'base/typography',
+	'base/lists',
+	'base/links',
+	'base/tables',
+	'base/media',
+	'base/forms';
+
+// layout ---------------------------------------
+@import
+	'layout/privacy-overlay',
+	'layout/cookie-banner',
+	'layout/navigation-accesskeys',
+	'layout/navigation-main',
+	'layout/sub-menu',
+	'layout/sub-menu-hotspots',
+	'layout/navigation-footer',
+	'layout/navigation-onpage',
+	'layout/layout',
+	'layout/header',
+	'layout/footer'; 
+
+// components -----------------------------------
+@import
+	'components/accordion',
+	'components/carousel',
+	'components/tabs',
+	'components/side-nav',
+	'components/social-profiles',
+	'components/article-header',
+	'components/article-footer',
+	'components/story-panel-1',
+	'components/story-panel-2',
+	'components/story-panel-3',
+	'components/plyr',
+	'components/inline-video',
+	'components/video-listing',
+	'components/image-listing',
+	'components/story-panel-3-small',
+    'components/figure-2',
+	'components/offset-panel',
+
+	'components/image-text',
+	'components/resource',
+	'components/offset-rte',
+
+	'components/margin-image',
+    'components/pullquote',
+    'components/large-figures',
+    'components/split-panel',
+    'components/figure-1',
+    'components/offices',
+    'components/people',
+	'components/image-listing',
+	'components/image-listing-x3',
+	'components/audio-listing',
+	'components/listing',
+	'components/v-listing',
+	'components/header-contact',
+	'components/header-investor',
+	'components/header-sus-careers',
+	'components/header-media-v1',
+	'components/header-media-v2',
+	'components/header-results',
+	'components/dropdowns',
+	'components/pagination',
+	'components/share',
+	'components/tweets',
+	// 'components/iframe',
+	'components/preloader',
+	'components/hotspots';
+
+
+// themes ---------------------------------------
+@import
+	'themes/themes-header-sus-careers',
+	'themes/themes-header-investors',
+	'themes/themes-header-results',
+	'themes/themes-header-media-v1',
+	'themes/themes-header-media-v2',
+	'themes/themes-header-contacts';
+
+// pages ----------------------------------------
+@import
+	'pages/search',
+	'pages/search-results',
+	'pages/templates',
+	'pages/contact_investors',
+	'pages/contact_key-network',
+	'pages/site-index';
+
+	
+// sitecore -------------------------------------
+@import
+	'sitecore/edit-mode';
+
+// themes ---------------------------------------
+/* OPTIONAL
+@import
+	'themes/brand-a',
+	'themes/brand-b';
+*/

@@ -1,0 +1,74 @@
+//
+// Footer
+// --------------------------------------------------
+
+.site-footer {
+	display: block;
+	padding: 15px 0;
+	font-family: $base-font-light;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	// background: $white;
+	// position: relative;
+	// z-index: 1;
+
+	@media only screen and ($bp-lg-min) {
+		text-align: left;
+		padding: 60px 0 45px;
+	}
+
+	@media only screen and ($bp-xxl-min) {
+		// font-size: 18px;
+		line-height: 20px;
+		padding: 90px 0 75px;
+	}
+
+	&__expand-btn {
+		bottom: 0;
+		width: 100%;
+		color: $black;
+		border: 0;
+		font-size: 14px;
+		line-height: 1;
+		padding-bottom: 10px;
+
+		@media only screen and ($bp-lg-min) {
+			display: none;
+		}
+
+		&:after {
+			transition: transform 0.3s ease-in;
+		}
+
+		&--open:after {
+			transform: rotate(45deg);
+		}
+	}
+
+	&__nav-col {
+		border-bottom: 1px solid #DADADA;
+		margin-bottom: 15px;
+
+		@media only screen and ($bp-lg-min) {
+			border-bottom: 0;
+		}
+	}
+
+	&__right-col {
+		@media only screen and ($bp-lg-min) {
+			text-align: right;
+		}
+	}
+
+	.c-social-profiles {
+		@media only screen and ($bp-lg-min) {
+			margin-bottom: 41px;
+		}
+
+		@media only screen and ($bp-xxl-min) {
+			margin-bottom: 64px;
+		}
+	}
+
+}

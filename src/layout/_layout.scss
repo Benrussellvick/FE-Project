@@ -1,0 +1,125 @@
+//
+// Layout
+// --------------------------------------------------
+
+* {
+	box-sizing: border-box;
+}
+
+// Grid system
+// -------------------------
+.container {
+	margin: 0 auto;
+	// max-width: $screen-xxl;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@media only screen and ($bp-md-min) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@media only screen and ($bp-lg-min) {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+
+	@media only screen and ($bp-xxl-min) {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+}
+
+// Container for single columns (mobile & tablet)
+.container-single {
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	@media only screen and ($bp-md-min) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@media only screen and ($bp-lg-min) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&.container-padding {
+		padding-top: 15px;
+
+		@media only screen and ($bp-md-min) {
+			padding-top: 30px;
+		}
+
+		@media only screen and ($bp-lg-min) {
+			padding-top:60px;
+		}
+	}
+}
+
+.row {
+	// margin-left: ceil(($grid-gutter-width / -2));
+	// margin-right: floor(($grid-gutter-width / -2));
+	@include clearfix;
+}
+
+[class^=col-] {
+	float: left;
+	position: relative;
+	min-height: 1px;
+	// padding-left: ceil(($grid-gutter-width / 2));
+	// padding-right: floor(($grid-gutter-width / 2));
+}
+
+@include make-grid(xs);
+@media ($bp-sm-min) {
+	@include make-grid(sm);
+}
+
+@media ($bp-md-min) {
+	@include make-grid(md);
+}
+
+@media ($bp-lg-min) {
+	@include make-grid(lg);
+}
+
+@media ($bp-xl-min) {
+	@include make-grid(xl);
+}
+
+@media ($bp-xxl-min) {
+	@include make-grid(xxl);
+}
+
+// HTML5 elements
+// -------------------------
+header,
+main,
+nav,
+footer {
+	display: block;
+}
+
+.page-wrapper {
+	padding-top: 53px;
+	min-height: 62vh;
+
+	@media only screen and ($bp-sm-min) {
+		padding-top: 58px;
+	}
+	@media only screen and ($bp-lg-min) {
+		padding-top: 65px;
+	}
+	@media only screen and ($bp-xxl-min) {
+		padding-top: 99px;
+	}
+}
+
+:target:before {
+  content:"";
+  display:block;
+  height:90px;
+  margin-top:-90px 0 0;
+}

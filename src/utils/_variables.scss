@@ -1,0 +1,244 @@
+//
+// Variables
+// --------------------------------------------------
+
+// colors ---------------------------------------
+
+$keyline: #DADADA; 
+$offwhite: #f0f0f0; 
+$wild-sand: #F5F5F5;
+$error: #D0021B;
+
+$black: #000000;
+$dark-grey: #323232;
+$white: #FFFFFF;
+
+$text-color: $black;
+$text-grey: #747474;
+
+$default-grey: #747474;
+$default-lt-grey: #E1E1E1;
+
+$spec-pink: #E13981;
+$pink-bg: #FFF6FA;
+
+$bright-blue: #62CDDA;
+$blue-bg: #F5FFFF;
+
+$panel-bg: rgba(11,0,171,0.07);
+
+//Theme colors 
+
+//theme A - strong green sand
+$green-zuccini: #0F3626;
+$green-kaitoke: #204D34;
+$yellow-sunflower: #FFEA80;
+$blue-pattens: #F3F6FA;
+
+//theme B - blue green lemon
+$green-deep-teal: #003832;
+$green-mosque: #015D53;
+$yellow-schoolbus: #FFD800;
+$white-lily: #F0F3F0;
+
+//theme C - dark blue sand
+$green-dark: #032934;
+$blue-sapphire: #073A4E;
+$yellow-mustard: #FFE761;
+$blue-solitude: #EFF3F5;
+
+//theme D - blue orange
+$blue-gem: #062945;
+$blue-tarawera: #083C64;
+$orange-clementine: #F06C00;
+$blue-ice: #F1F4F7;
+
+//theme E - navy orange
+$blue-navy: #081746;
+$blue-midnight: #15266D;
+$pink-rose-bud: #F06C00;
+$lavender: #F2FAFC;
+
+//theme F - red violet light orange
+$purple-blackberry: #40123E;
+$purple-palatinate: #662661;
+$yellow-selective: #FFBB00;
+$grey-whisper: #F6F2F6;
+
+//theme G - dark red light orange
+$purple-tyrian: #330017;
+$purple-red: #540026;
+$yellow-selective: #FFBB00;
+$white-smoke: #F1F0F0;
+
+$blue-link-water: #062b50;
+$search-blue: #062b50;
+
+$dk-purple: #231E58;
+$lt-purple: #3B33A0;
+$md-purple: #7176FB;
+
+$dk-header-blue: #041C39;
+$lt-header-blue: #0A2B53;
+
+$dk-header-red: #330E1F;
+$lt-header-red: #531833;
+$header-yellow: #FFAC22;
+// ------------
+
+// box shadows
+$dropdown-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+
+
+// media queries --------------------------------
+
+$screen-xs: 320px;	 // MOBILE
+$screen-sm: 480px;	 // LARGE MOBILE/SMALL TABLET
+$screen-md: 768px;	 // TABLET
+$screen-lg: 1020px;	 // SMALL DESKTOP
+$screen-xl: 1441px;	 // LARGE DESKTOP
+$screen-xxl: 1921px; // EXTRA LARGE DESKTOP
+
+$bp-xs-min: unquote("min-width: #{$screen-xs}");
+$bp-sm-min: unquote("min-width: #{$screen-sm}");
+$bp-md-min: unquote("min-width: #{$screen-md}");
+$bp-lg-min: unquote("min-width: #{$screen-lg}");
+$bp-xl-min: unquote("min-width: #{$screen-xl}");
+$bp-xxl-min: unquote("min-width: #{$screen-xxl}");
+
+// max-width break points if required, but try to avoid: think mobile first
+$bp-xs-max: unquote("max-width: #{$screen-sm - 1px}");
+$bp-sm-max: unquote("max-width: #{$screen-md - 1px}");
+$bp-md-max: unquote("max-width: #{$screen-lg - 1px}");
+$bp-lg-max: unquote("max-width: #{$screen-xl - 1px}");
+$bp-xl-max: unquote("max-width: #{$screen-xxl - 1px}");
+
+//== Media queries breakpoints (slapped in from BS 3 ;)
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+// add tweakpoints as required 
+// (http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#major-minor)
+// @bp-min-md-XX: ~"min-width: XXXpx"; 
+
+.bp-md-square-me{
+  @media only screen and ($bp-md-min) and ($bp-lg-max) {
+    padding-bottom:100%;width:100%;height:0; 
+  }
+}
+
+// fonts ----------------------------------------
+$base-font-size: 18px !default;
+$base-line-height: 26px !default;
+
+$base-font-size-md:	24px !default;
+$base-line-height-md: 36px !default;
+
+$base-font-size-xxl: 26px !default;
+$base-line-height-xxl: 38px !default;
+
+
+$base-font-light: "Apercu Light Pro", sans-serif;
+$base-font-bold: "Apercu Bold Pro", sans-serif;
+
+$body-font-light: "Financier Display Light", sans-serif;
+$body-font-semibold: "Financier Display Semibold", sans-serif;
+
+// grid settings --------------------------------
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default; // Gets divided in half for the left and right.
+
+
+// Get breakpoint in JS ----------------------------------------
+
+body:before {
+  content: "xs";
+  display: none; /* Prevent from displaying. */
+}
+body:after {
+  display: none; /* Prevent from displaying. */
+}
+
+@media only screen and ($bp-sm-min) {
+  body:before {
+    content: "sm";
+  }
+}
+
+@media only screen and ($bp-md-min) {
+  body:before {
+    content: "md";
+  }
+}
+
+
+
+@media only screen and ($bp-lg-min) {
+  body:before {
+    content: "lg";
+  }
+}
+
+@media only screen and ($bp-xl-min) {
+  body:before {
+    content: "xl";
+  }
+}
+
+@media only screen and ($bp-xxl-min) {
+  body:before {
+    content: "xxl";
+  }
+}
+
+
+// variables and breakpoints for GS3 fullheight
+// GS = (growth stories) featured panels
+$screen-gs: 1296px;
+$screen-gs-width: 1296px;
+$screen-gs-height: 600px;
+
+@media only screen and (min-height: $screen-gs-height) and (min-width: $screen-gs-width) {
+  body.home-page:before {
+    content: "gs";
+  }
+  body.featured-page:before {
+    content: "gs";
+  }
+}
+// -----------------

@@ -1,0 +1,153 @@
+// ==============================================
+// Article index - eg news, blogs, calendar
+// ==============================================
+
+.c-listing {
+	&__horizontal-border {
+		border-top: 1px solid $keyline;
+
+		@media only screen and ($bp-lg-min) {
+			margin: 0 60px;
+		}
+
+		@media only screen and ($bp-xxl-min) {
+			margin: 0 90px;
+		}
+
+		&-tag {
+			padding: 20px 0 15px;
+
+			@media only screen and ($bp-md-min) {
+				padding: 20px 5px 30px 0;
+			}
+
+			@media only screen and ($bp-lg-min) {
+				padding: 35px 0;
+			}
+
+			@media only screen and ($bp-xxl-min) {
+				padding: 40px 0 35px;
+			}
+
+			.tag {
+				margin: 0;
+			}
+		}
+	}
+
+	&__tag {
+	  padding: 15px 0;
+	  border-bottom: 1px solid $keyline;
+  
+	  @media only screen and ($bp-xl-min) {
+		padding: 30px 0;
+	  }
+
+	  &-top {
+		border-top: 1px solid $keyline; 
+		border-bottom: none;
+		padding-top: 25px;
+		margin-bottom: 0;
+	  }
+	}
+  
+	&__tag-link {
+	  &:link,
+	  &:visited {
+		text-decoration: none;
+	  }
+	  
+	  &:hover,
+	  &:focus,
+	  &:active {
+			text-decoration: underline;
+	  }
+	}
+
+	&__horizontal {
+		a {
+			&:hover,
+			&:focus,
+			&:active {
+				h1, h2, h3, h4, h5 {
+					text-decoration: underline;
+				}
+			}
+		}
+		h5 {
+			
+			font-size: 24px;
+			line-height: 28px;
+			
+			@media only screen and ($bp-md-min) {
+				font-size: 26px;
+				line-height: 34px;
+			}
+
+			@media only screen and ($bp-xxl-min) {
+				font-size: 35px;
+				line-height: 42px;
+			}
+		}
+		.date {
+			color: $text-grey;
+			margin-bottom: 15px;
+		}
+		.c-image-listing__wrapper {
+			margin-bottom: 30px;
+
+			p {
+				a {
+					margin-bottom: 10px;
+				}
+			}
+
+			@media only screen and ($bp-lg-min) {
+				padding: 0 20px;
+				margin-bottom: 70px;
+			}
+
+			@media only screen and ($bp-xl-min) {
+				padding: 0 30px;
+				margin-bottom: 90px;
+			}
+		}
+
+		.row {
+			.c-image-listing__col {
+				&:last-child {
+					.c-image-listing__wrapper {
+						margin-bottom: 60px;
+						@media only screen and ($bp-md-min) {
+							margin-bottom: 80px;
+						}
+					}
+				}
+			}
+			@media only screen and ($bp-lg-min) {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+			@media only screen and ($bp-xl-min) {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+		}
+		@media only screen and ($bp-xxl-min) {
+			padding: 0 90px;
+		}
+		
+		.c-image-listing__wrapper .c-image-listing__media-wrapper .c-image-listing__figure {
+			@media only screen and ($bp-md-min) {
+				height: auto;
+			}
+			@media only screen and ($bp-lg-min) {
+				height: auto;
+
+				img {
+					height: auto;
+				}
+			}
+		}
+	}
+  }
